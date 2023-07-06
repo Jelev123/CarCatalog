@@ -12,5 +12,10 @@ namespace CarCatalog.Core.Contracts.Car
 
         CarViewModel GetById(int id);
 
+        IEnumerable<CarViewModel> GetAll(int page, int itemsPerPage);
+
+        IEnumerable<RandomCars> RandomCars(int count);
+
+        int GetCarCount();
     }
 }

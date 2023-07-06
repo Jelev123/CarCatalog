@@ -1,10 +1,8 @@
 ﻿using CarCatalog.Core.Contracts;
 using CarCatalog.Core.Contracts.Car;
-using CarCatalog.Core.ViewModels.BodyType;
 using CarCatalog.Core.ViewModels.Car;
 using CarCatalog.Infrastructure.Data;
 using CarCatalog.Infrastructure.Data.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace CarCatalog.Core.Services.Car
 {
@@ -81,17 +79,10 @@ namespace CarCatalog.Core.Services.Car
                 car.Year = editCar.Year;
                 car.HorsePower = editCar.HorsePower;
                 car.FuelType = editCar.FuelType;
-                foreach (var item in car.CarBodyTypes)
-                {
-                    item.BodyType.BodyTypeName = editCar.BodyTypeName;
-                    item.BodyType.Doors = editCar.Doors;
-                }
-
-                foreach (var item in car.CarTransmisions)
-                {
-                    item.Transmision.TransmisionType = editCar.TransmisionType;
-                    item.Transmision.Gears = editCar.Gears;
-                }
+                bodyType.BodyTypeName = editCar.BodyTypeName;
+                bodyType.Doors = editCar.Doors;
+                transmision.TransmisionType = editCar.TransmisionType;
+                transmision.Gears = editCar.Gears;
 
                 if (editCar.GalleryFiles != null)
                 {
@@ -104,15 +95,32 @@ namespace CarCatalog.Core.Services.Car
                             ImageId = Guid.NewGuid().ToString(),
                             ImageName = file.Name,
                             URL = file.URL,
+                            CarId = car.CarId
                         });
                     }
                 }
-
                 data.Update(car);
                 data.SaveChanges();
             }
+        }
 
-
+        public IEnumerable<CarViewModel> GetAll(int page, int itemsPerPage)
+        {
+            return this.data.Cars
+                .Select(car => new CarViewModel()
+                {
+                    Id = car.CarId,
+                    CarBrand = car.CarBrand,
+                    CarModel = car.CarModel,
+                    Year = car.Year,
+                    HorsePower = car.HorsePower,
+                    FuelType = car.FuelType,
+                    BodyTypeName = car.CarBodyTypes.FirstOrDefault().BodyType.BodyTypeName,
+                    Doors = car.CarBodyTypes.FirstOrDefault().BodyType.Doors,
+                    TransmisionType = car.CarTransmisions.FirstOrDefault().Transmision.TransmisionType,
+                    Gears = car.CarTransmisions.FirstOrDefault().Transmision.Gears,
+                    CoverPhoto = car.Images.FirstOrDefault().URL,
+                }).Skip((page - 1) * itemsPerPage).Take(itemsPerPage);
         }
 
         public CarViewModel GetById(int id)
@@ -121,6 +129,7 @@ namespace CarCatalog.Core.Services.Car
                 .Where(car => car.CarId == id)
                 .Select(car => new CarViewModel()
                 {
+                    Id = car.CarId,
                     CarBrand = car.CarBrand,
                     CarModel = car.CarModel,
                     Year = car.Year,
@@ -135,9 +144,30 @@ namespace CarCatalog.Core.Services.Car
                         ImageId = img.ImageId,
                         Name = img.ImageName,
                         URL = img.URL,
+                        CarId = car.CarId,
                     }).ToList(),
                 }).FirstOrDefault();
 
+        }
+
+        public int GetCarCount()
+        {
+            return this.data.Cars.Count();
+        }
+
+        public IEnumerable<RandomCars> RandomCars(int count)
+        {
+            return this.data.Cars
+               .OrderBy(s => Guid.NewGuid())
+               .Select(car => new RandomCars()
+               {
+                   Id = car.CarId,
+                   CarBrand = car.CarBrand,
+                   CarModel = car.CarModel,
+                   Year = car.Year,
+                   CoverPhoto = car.Images.FirstOrDefault().URL,
+               }).ToList()
+               .Take(count);
         }
     }
 }

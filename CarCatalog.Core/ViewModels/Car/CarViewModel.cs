@@ -6,6 +6,7 @@ namespace CarCatalog.Core.ViewModels.Car
 {
     public class CarViewModel
     {
+        public int Id { get; set; }
         public string CarBrand { get; set; }
 
         public string CarModel { get; set; }
@@ -15,7 +16,9 @@ namespace CarCatalog.Core.ViewModels.Car
         public IFormFileCollection GalleryFiles { get; set; }
 
         public List<CarGalleryModel> Gallery { get; set; }
-   
+
+        public string CoverPhoto { get; set; }
+
         public string TransmisionType { get; set; }
 
         public int Gears { get; set; }

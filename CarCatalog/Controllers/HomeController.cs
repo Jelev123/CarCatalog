@@ -1,4 +1,6 @@
-﻿using CarCatalog.Infrastructure.Data;
+﻿using CarCatalog.Core.Contracts.Car;
+using CarCatalog.Core.ViewModels.Home;
+using CarCatalog.Infrastructure.Data;
 using CarCatalog.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -8,17 +10,21 @@ namespace CarCatalog.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationDbContext data;
-
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext data)
+        private readonly ICarService carService;
+        public HomeController(ILogger<HomeController> logger, ICarService carService)
         {
             _logger = logger;
-            this.data = data;
+            this.carService = carService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var randomCars = new HomeViewModel()
+            {
+                RandomCars = this.carService.RandomCars(6)
+            };
+
+            return View(randomCars);
         }
 
         public IActionResult Privacy()

@@ -12,3 +12,17 @@ D:\Projects\CarCatalog.Infrastructure\obj\Debug\net6.0\refint\CarCatalog.Infrast
 D:\Projects\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.pdb
 D:\Projects\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.genruntimeconfig.cache
 D:\Projects\CarCatalog.Infrastructure\obj\Debug\net6.0\ref\CarCatalog.Infrastructure.dll
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\bin\Debug\net6.0\CarCatalog.Infrastructure.deps.json
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\bin\Debug\net6.0\CarCatalog.Infrastructure.runtimeconfig.json
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\bin\Debug\net6.0\CarCatalog.Infrastructure.dll
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\bin\Debug\net6.0\CarCatalog.Infrastructure.pdb
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.csproj.AssemblyReference.cache
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.AssemblyInfo.cs
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.dll
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\refint\CarCatalog.Infrastructure.dll
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.pdb
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\CarCatalog.Infrastructure.genruntimeconfig.cache
+D:\Projects\CarCatalog\CarCatalog.Infrastructure\obj\Debug\net6.0\ref\CarCatalog.Infrastructure.dll

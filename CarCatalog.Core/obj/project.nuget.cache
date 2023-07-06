@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ofaii2Ed9isFwO3DiNlxPgFb7vTJFIBMYmcSxZARV9Qejti46dv+5WU7vWya68D+7WRf/FyxGyIm2TWMLTr+Uw==",
+  "dgSpecHash": "zMC0rXUYfo65qxhAWipbahjRCRfq90kyOAeU1TfBAH0742Cp2QIjSnfID/iJcyC/6hfPx3x3HYjaI2SuFyNttA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\CarCatalog.Core\\CarCatalog.Core.csproj",
+  "projectFilePath": "D:\\Projects\\CarCatalog\\CarCatalog.Core\\CarCatalog.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

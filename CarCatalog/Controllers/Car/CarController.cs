@@ -48,10 +48,54 @@ namespace CarCatalog.Controllers.Car
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult GetCarById(int id)
+        public IActionResult Edit(int id)
         {
-            this.carService.GetById(3);
-            return this.View();
+            var transmisions = this.transmisionService.AllTransmisions<TransmisionViewModel>();
+            var bodyTypes = this.bodyTypeService.AllBodyTypes<BodyTypeViewModel>();
+
+            this.ViewData["transmisions"] = transmisions.Select(s => new CarViewModel
+            {
+                TransmisionType = s.TransmisionType,
+                Gears = s.Gears,
+            }).ToList();
+
+            this.ViewData["bodyTypes"] = bodyTypes.Select(s => new CarViewModel
+            {
+                BodyTypeName = s.BodyTypeName,
+                Doors = s.Doors,
+            }).ToList();
+
+            var car = this.carService.GetById(id);
+            return View(car);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(CarViewModel car ,int id)
+        {
+            this.carService.EditCar(car , id);
+            return this.RedirectToAction("GetCarById","Car", new { id = id });
+        }
+
+        public IActionResult GetCarById(int id) => this.View(carService.GetById(id));
+
+        public IActionResult GetAllCars(int id = 1)
+        {
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 1;
+
+            var viewModel = new CarListViewModel()
+            {
+                ItemsPerPage = ItemsPerPage,
+                PageNumber = id,
+                CarsCount = this.carService.GetCarCount(),
+                Cars = carService.GetAll(id, ItemsPerPage)
+            };
+
+            return View(viewModel); 
         }
     }
 }

@@ -9,49 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CarCatalog
 build_property.RootNamespace = CarCatalog
-build_property.ProjectDir = D:\Projects\CarCatalog\
+build_property.ProjectDir = D:\Projects\CarCatalog\CarCatalog\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Projects\CarCatalog
+build_property.MSBuildProjectDirectory = D:\Projects\CarCatalog\CarCatalog
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projects/CarCatalog/Views/BodyType/AddBodyType.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/BodyType/AddBodyType.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9keVR5cGVcQWRkQm9keVR5cGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/Car/AddCar.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/Car/AddCar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEFkZENhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/Home/Index.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/Car/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CarCatalog/CarCatalog/Views/Car/GetAllCars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEdldEFsbENhcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CarCatalog/CarCatalog/Views/Car/GetCarById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEdldENhckJ5SWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CarCatalog/CarCatalog/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/Home/Privacy.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/Shared/Error.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/Shared/_PaginPartilView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpblBhcnRpbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CarCatalog/CarCatalog/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/Transmision/AddTransmision.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/Transmision/AddTransmision.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNtaXNpb25cQWRkVHJhbnNtaXNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/_ViewImports.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/_ViewStart.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CarCatalog/Views/Shared/_Layout.cshtml]
+[D:/Projects/CarCatalog/CarCatalog/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gpnjjdk8yi

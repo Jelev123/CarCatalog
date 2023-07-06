@@ -2116,11 +2116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\CarCatalog\\CarCatalog.csproj",
+      "projectUniqueName": "D:\\Projects\\CarCatalog\\CarCatalog\\CarCatalog.csproj",
       "projectName": "CarCatalog",
-      "projectPath": "D:\\Projects\\CarCatalog\\CarCatalog.csproj",
+      "projectPath": "D:\\Projects\\CarCatalog\\CarCatalog\\CarCatalog.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\CarCatalog\\obj\\",
+      "outputPath": "D:\\Projects\\CarCatalog\\CarCatalog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2143,11 +2143,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Projects\\CarCatalog.Core\\CarCatalog.Core.csproj": {
-              "projectPath": "D:\\Projects\\CarCatalog.Core\\CarCatalog.Core.csproj"
+            "D:\\Projects\\CarCatalog\\CarCatalog.Core\\CarCatalog.Core.csproj": {
+              "projectPath": "D:\\Projects\\CarCatalog\\CarCatalog.Core\\CarCatalog.Core.csproj"
             },
-            "D:\\Projects\\CarCatalog.Infrastructure\\CarCatalog.Infrastructure.csproj": {
-              "projectPath": "D:\\Projects\\CarCatalog.Infrastructure\\CarCatalog.Infrastructure.csproj"
+            "D:\\Projects\\CarCatalog\\CarCatalog.Infrastructure\\CarCatalog.Infrastructure.csproj": {
+              "projectPath": "D:\\Projects\\CarCatalog\\CarCatalog.Infrastructure\\CarCatalog.Infrastructure.csproj"
             }
           }
         }

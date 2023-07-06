@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SZgjLLgFN8+9MltbxjjJjOH/4stIY5ro37uh5Cv81qe3ZowojCKqH2mw24nCqE1AgyzZ8UgJyKPNKVudlNuUGw==",
+  "dgSpecHash": "WFCpwtjTqFszMHUyFGeBlErZt76u6AliY2bQe8TqFWx2t7+VvqO3OwtfMgoxDFSV5eYXz1M1V9CFpVT75hkrGA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\CarCatalog\\CarCatalog.csproj",
+  "projectFilePath": "D:\\Projects\\CarCatalog\\CarCatalog\\CarCatalog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
