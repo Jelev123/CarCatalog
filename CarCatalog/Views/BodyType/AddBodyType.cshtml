@@ -1,0 +1,22 @@
+﻿@using CarCatalog.Core.ViewModels.BodyType;
+@model BodyTypeViewModel
+
+
+<h2 style="color: white">@ViewData["Title"]</h2>
+
+<div class="align-content-center">
+
+    <div class="row col-md-4 offset-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="BodyTypeName"></label>
+                <input asp-for="BodyTypeName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Doors"></label>
+                <input asp-for="Doors" class="form-control" />
+            </div>
+            <input class="btn text-black btn-info text-center " type="submit" value="Add" />
+        </form>
+    </div>
+</div>

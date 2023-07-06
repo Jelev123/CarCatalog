@@ -1,0 +1,85 @@
+﻿@using CarCatalog.Core.ViewModels.Car;
+@model CarViewModel
+
+
+
+
+<h2 style="color: white">@ViewData["Title"]</h2>
+
+<div class="align-content-center">
+        
+    <div class="row col-md-4 offset-4">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="GalleryFiles">Gallery Files</label>
+                <input type="file" id="GalleryFiles" class="form-control-file" asp-for="GalleryFiles" multiple />
+                <span asp-validation-for="GalleryFiles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarBrand"></label>
+                <input asp-for="CarBrand" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="CarModel"></label>
+                <input asp-for="CarModel" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year"></label>
+                <input asp-for="Year" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="HorsePower"></label>
+                <input asp-for="HorsePower" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FuelType"></label>
+                <input asp-for="FuelType" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="TransmisionType">Transmision</label>
+                <select id="TransmisionType" class="form-control" asp-for="TransmisionType">
+                    <option selected disabled>Select a Transmision</option>
+                    @foreach (var transmision in (IEnumerable<CarViewModel>)this.ViewData["transmisions"])
+                    {
+                        <option value="@transmision.TransmisionType">@transmision.TransmisionType</option>
+                    }
+                </select>
+                <span asp-validation-for="TransmisionType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="TransmisionType">Gears</label>
+                <select id="TransmisionType" class="form-control" asp-for="Gears">
+                    <option selected disabled>Select a Gears</option>
+                    @foreach (var transmision in (IEnumerable<CarViewModel>)this.ViewData["transmisions"])
+                    {
+                        <option value="@transmision.Gears">@transmision.Gears</option>
+                    }
+                </select>
+                <span asp-validation-for="TransmisionType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="BodyType">BodyType</label>
+                <select id="BodyType" class="form-control" asp-for="BodyTypeName">
+                    <option selected disabled>Select a BodyType</option>
+                    @foreach (var bodyType in (IEnumerable<CarViewModel>)this.ViewData["bodyTypes"])
+                    {
+                        <option value="@bodyType.BodyTypeName">@bodyType.BodyTypeName</option>
+                    }
+                </select>
+                <span asp-validation-for="BodyTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="BodyType">Doors</label>
+                <select id="BodyType" class="form-control" asp-for="Doors">
+                    <option selected disabled>Select a Doors</option>
+                    @foreach (var bodyType in (IEnumerable<CarViewModel>)this.ViewData["bodyTypes"])
+                    {
+                        <option value="@bodyType.Doors">@bodyType.Doors</option>
+                    }
+                </select>
+                <span asp-validation-for="BodyTypeName" class="text-danger"></span>
+            </div>
+            <input  class="btn text-black btn-info text-center " type="submit" value="Add" />
+        </form>
+    </div>
+</div>

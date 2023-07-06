@@ -1,0 +1,373 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\CarCatalog\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CarCatalog.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CarCatalog.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\0ed68c19-e912-44bb-b661-da493f411f41_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\0ed68c19-e912-44bb-b661-da493f411f41_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\20334cea-9833-41df-928b-b4d3d5b5cd1c_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\20334cea-9833-41df-928b-b4d3d5b5cd1c_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\22f9ee95-e364-4762-bc47-7a86b94a3aaa_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\22f9ee95-e364-4762-bc47-7a86b94a3aaa_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\24da77a3-dbfb-4b86-b78e-ba249b51a592_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\24da77a3-dbfb-4b86-b78e-ba249b51a592_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\36008908-51d5-4b5f-be9d-8c15c050c2c0_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\36008908-51d5-4b5f-be9d-8c15c050c2c0_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\3c2a6cd9-d5a4-47b6-b829-43e43dd2f820_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\3c2a6cd9-d5a4-47b6-b829-43e43dd2f820_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\3c52dc78-1458-419c-bd88-52eed82408dd_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\3c52dc78-1458-419c-bd88-52eed82408dd_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\42e68b3f-e596-4ed8-a51a-0991f0846ae5_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\42e68b3f-e596-4ed8-a51a-0991f0846ae5_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\75149873-1424-46a8-bccb-43b51d25551a_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\75149873-1424-46a8-bccb-43b51d25551a_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\7ae8ad49-46e7-456d-a540-54dbd1ed89a2_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\7ae8ad49-46e7-456d-a540-54dbd1ed89a2_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\89672239-a8ae-4289-a7e2-616d2441dffd_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\89672239-a8ae-4289-a7e2-616d2441dffd_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\9271294f-1377-4609-b911-1acacafef808_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\9271294f-1377-4609-b911-1acacafef808_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\929bcb0a-6c16-49e7-b23e-a98bb4e35795_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\929bcb0a-6c16-49e7-b23e-a98bb4e35795_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\9c6e2310-6118-478a-9d12-094a25e397f0_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\9c6e2310-6118-478a-9d12-094a25e397f0_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\a3d05076-e8f6-424c-940a-5fefd69b182b_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\a3d05076-e8f6-424c-940a-5fefd69b182b_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\a5365e1d-cd85-427e-aebc-d2026a3dad4c_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\a5365e1d-cd85-427e-aebc-d2026a3dad4c_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\b3dc5b84-c386-41f6-aeeb-c498972512df_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\b3dc5b84-c386-41f6-aeeb-c498972512df_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\c836e304-d2c3-4221-850b-15d8fb1194e7_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\c836e304-d2c3-4221-850b-15d8fb1194e7_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\c892d633-1ff6-4690-95e3-f334b8021d94_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\c892d633-1ff6-4690-95e3-f334b8021d94_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\cdc86dc9-0512-4e06-b614-f8faa11857d6_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\cdc86dc9-0512-4e06-b614-f8faa11857d6_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\d1ea9ae7-c359-4b21-8424-9dabcf48307d_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\d1ea9ae7-c359-4b21-8424-9dabcf48307d_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\dc3bef9e-9e12-486c-af65-a2d865326817_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\dc3bef9e-9e12-486c-af65-a2d865326817_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\dd3b1be0-1a7e-4d64-a867-be464403f248_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\dd3b1be0-1a7e-4d64-a867-be464403f248_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\e2a7dc39-fd52-4613-a5d1-61c5e49d76cd_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\e2a7dc39-fd52-4613-a5d1-61c5e49d76cd_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\e5c6e530-6dab-4778-819b-205ac6a53f22_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\e5c6e530-6dab-4778-819b-205ac6a53f22_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\ebe1976a-41c6-4d2c-832c-195ed874c03e_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\ebe1976a-41c6-4d2c-832c-195ed874c03e_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\images\\carImages\\eebe73d6-7729-452e-8509-264b196d2632_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\eebe73d6-7729-452e-8509-264b196d2632_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CarCatalog.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.CarCatalog.props",
+      "PackagePath": "build\\CarCatalog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.CarCatalog.props",
+      "PackagePath": "buildMultiTargeting\\CarCatalog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.CarCatalog.props",
+      "PackagePath": "buildTransitive\\CarCatalog.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

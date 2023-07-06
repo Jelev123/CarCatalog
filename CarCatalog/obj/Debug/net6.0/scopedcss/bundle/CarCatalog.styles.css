@@ -1,0 +1,49 @@
+/* _content/CarCatalog/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-gpnjjdk8yi] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-gpnjjdk8yi] {
+  color: #0077cc;
+}
+
+.btn-primary[b-gpnjjdk8yi] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-gpnjjdk8yi], .nav-pills .show > .nav-link[b-gpnjjdk8yi] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-gpnjjdk8yi] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-gpnjjdk8yi] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-gpnjjdk8yi] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-gpnjjdk8yi] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-gpnjjdk8yi] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
