@@ -7,6 +7,7 @@ using CarCatalog.Core.Services.Car;
 using CarCatalog.Core.Services.Image;
 using CarCatalog.Core.Services.Transmision;
 using CarCatalog.Infrastructure.Data;
+using CloudinaryDotNet;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ builder.Services.AddTransient<ICarService, CarService>();
 builder.Services.AddTransient<ITransmisionService, TransmisionService>();
 builder.Services.AddTransient<IBodyTypeService, BodyTypeService>();
 builder.Services.AddTransient<IImageService, ImageService>();
+
 
 var app = builder.Build();
 

@@ -140,3 +140,8 @@ D:\Projects\CarCatalog\CarCatalog\obj\Debug\net6.0\refint\CarCatalog.dll
 D:\Projects\CarCatalog\CarCatalog\obj\Debug\net6.0\CarCatalog.pdb
 D:\Projects\CarCatalog\CarCatalog\obj\Debug\net6.0\CarCatalog.genruntimeconfig.cache
 D:\Projects\CarCatalog\CarCatalog\obj\Debug\net6.0\ref\CarCatalog.dll
+D:\Projects\CarCatalog\CarCatalog\bin\Debug\net6.0\CloudinaryDotNet.dll
+D:\Projects\CarCatalog\CarCatalog\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Projects\CarCatalog\CarCatalog\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Projects\CarCatalog\CarCatalog\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\CarCatalog\CarCatalog\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll

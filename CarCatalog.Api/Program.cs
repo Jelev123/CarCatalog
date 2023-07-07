@@ -1,3 +1,4 @@
+using CarCatalog.Core;
 using CarCatalog.Core.Contracts;
 using CarCatalog.Core.Contracts.BodyType;
 using CarCatalog.Core.Contracts.Car;
@@ -8,6 +9,8 @@ using CarCatalog.Core.Services.Image;
 using CarCatalog.Core.Services.Transmision;
 using CarCatalog.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,15 +28,10 @@ builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<ITransmisionService, TransmisionService>();
 builder.Services.AddScoped<IBodyTypeService, BodyTypeService>();
 
-builder.Services.AddSwaggerGen(options =>
-{
-    options.IncludeXmlComments(@"D:\Projects\CarCatalog\CarCatalog.Api\Api.xml");
-});
-
-
-
 var app = builder.Build();
 
+
+app.UseSwagger();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

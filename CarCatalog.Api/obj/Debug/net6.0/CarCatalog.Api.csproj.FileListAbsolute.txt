@@ -67,3 +67,12 @@ D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\CarCatalog.Infrastructure
 D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\CarCatalog.Core.pdb
 D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\CarCatalog.Infrastructure.pdb
 D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\Api.xml
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\Azure.Core.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\Azure.Storage.Blobs.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\Azure.Storage.Common.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\CloudinaryDotNet.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\System.IO.Hashing.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Projects\CarCatalog\CarCatalog.Api\bin\Debug\net6.0\Dropbox.Api.dll
