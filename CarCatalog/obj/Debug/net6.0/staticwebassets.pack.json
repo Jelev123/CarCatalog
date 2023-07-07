@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\carImages\\0f36d940-a15c-45d9-b6a3-848eb69b8156_10-porsche-718-cayman-gt4-rs-top-10.webp"
     },
     {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\11dd7c5a-f457-409f-b9aa-f5e70b2269a9_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\11dd7c5a-f457-409f-b9aa-f5e70b2269a9_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\20334cea-9833-41df-928b-b4d3d5b5cd1c_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
       "PackagePath": "staticwebassets\\images\\carImages\\20334cea-9833-41df-928b-b4d3d5b5cd1c_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\24da77a3-dbfb-4b86-b78e-ba249b51a592_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
       "PackagePath": "staticwebassets\\images\\carImages\\24da77a3-dbfb-4b86-b78e-ba249b51a592_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\2f08272c-4919-493d-b5d4-9ec84d6f1fda_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\2f08272c-4919-493d-b5d4-9ec84d6f1fda_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
     },
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\36008908-51d5-4b5f-be9d-8c15c050c2c0_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
@@ -53,12 +61,32 @@
       "PackagePath": "staticwebassets\\images\\carImages\\456eed95-4a84-4faa-95bd-474b7629ba04_10-porsche-718-cayman-gt4-rs-top-10.webp"
     },
     {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\48adcdc2-140d-4876-ad5d-457d3555c9f8_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\48adcdc2-140d-4876-ad5d-457d3555c9f8_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\59c45576-e26d-4e66-b360-61989d063353_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\59c45576-e26d-4e66-b360-61989d063353_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\66fd6530-1064-4287-acc3-91636861da7c_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
       "PackagePath": "staticwebassets\\images\\carImages\\66fd6530-1064-4287-acc3-91636861da7c_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
     },
     {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\750f3b26-0be9-46e1-8eeb-5f898e47f827_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\750f3b26-0be9-46e1-8eeb-5f898e47f827_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\75149873-1424-46a8-bccb-43b51d25551a_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
       "PackagePath": "staticwebassets\\images\\carImages\\75149873-1424-46a8-bccb-43b51d25551a_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\75151a30-049f-41bb-86a9-34d40acf41dd_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\75151a30-049f-41bb-86a9-34d40acf41dd_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\787cc6d1-80bc-4ff8-a61f-b7957ffe48d5_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\787cc6d1-80bc-4ff8-a61f-b7957ffe48d5_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
     },
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\7ae8ad49-46e7-456d-a540-54dbd1ed89a2_10-porsche-718-cayman-gt4-rs-top-10.webp",
@@ -81,6 +109,10 @@
       "PackagePath": "staticwebassets\\images\\carImages\\9c6e2310-6118-478a-9d12-094a25e397f0_10-porsche-718-cayman-gt4-rs-top-10.webp"
     },
     {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\a3abd1a0-db52-4a07-89ee-593117ee3a60_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\a3abd1a0-db52-4a07-89ee-593117ee3a60_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\a3d05076-e8f6-424c-940a-5fefd69b182b_10-porsche-718-cayman-gt4-rs-top-10.webp",
       "PackagePath": "staticwebassets\\images\\carImages\\a3d05076-e8f6-424c-940a-5fefd69b182b_10-porsche-718-cayman-gt4-rs-top-10.webp"
     },
@@ -91,6 +123,10 @@
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\b3dc5b84-c386-41f6-aeeb-c498972512df_10-porsche-718-cayman-gt4-rs-top-10.webp",
       "PackagePath": "staticwebassets\\images\\carImages\\b3dc5b84-c386-41f6-aeeb-c498972512df_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\c70ebaca-9f70-47a2-9961-99fd2d4111b5_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\c70ebaca-9f70-47a2-9961-99fd2d4111b5_10-porsche-718-cayman-gt4-rs-top-10.webp"
     },
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\c836e304-d2c3-4221-850b-15d8fb1194e7_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
@@ -105,12 +141,20 @@
       "PackagePath": "staticwebassets\\images\\carImages\\c9eca5be-cf24-4c2b-a852-15ff5422f87e_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
     },
     {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\cd68effa-7460-4933-9ec7-56f218fcce09_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\cd68effa-7460-4933-9ec7-56f218fcce09_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\cdc86dc9-0512-4e06-b614-f8faa11857d6_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
       "PackagePath": "staticwebassets\\images\\carImages\\cdc86dc9-0512-4e06-b614-f8faa11857d6_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
     },
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\d1ea9ae7-c359-4b21-8424-9dabcf48307d_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
       "PackagePath": "staticwebassets\\images\\carImages\\d1ea9ae7-c359-4b21-8424-9dabcf48307d_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\da60b5ac-9172-400a-a876-d46fc72a1861_10-porsche-718-cayman-gt4-rs-top-10.webp",
+      "PackagePath": "staticwebassets\\images\\carImages\\da60b5ac-9172-400a-a876-d46fc72a1861_10-porsche-718-cayman-gt4-rs-top-10.webp"
     },
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\dd3b1be0-1a7e-4d64-a867-be464403f248_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
@@ -123,6 +167,10 @@
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\e43cfa3b-f9e8-4665-acec-54f580ef7d2d_10-porsche-718-cayman-gt4-rs-top-10.webp",
       "PackagePath": "staticwebassets\\images\\carImages\\e43cfa3b-f9e8-4665-acec-54f580ef7d2d_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\e47c6469-116a-4960-860c-227ab430c182_18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+      "PackagePath": "staticwebassets\\images\\carImages\\e47c6469-116a-4960-860c-227ab430c182_18015-MC20BluInfinito-scaled-e1666008987698.jpg"
     },
     {
       "Id": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\e5c6e530-6dab-4778-819b-205ac6a53f22_10-porsche-718-cayman-gt4-rs-top-10.webp",

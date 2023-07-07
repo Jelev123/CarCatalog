@@ -7,11 +7,10 @@
 <h2 style="color: white">@ViewData["Title"]</h2>
 
 <div class="align-content-center">
-        
     <div class="row col-md-4 offset-4">
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" style="margin-top: 20px;">
             <div class="form-group">
-                <label for="GalleryFiles">Gallery Files</label>
+                <label for="GalleryFiles">Choose image</label>
                 <input type="file" id="GalleryFiles" class="form-control-file" asp-for="GalleryFiles" multiple />
                 <span asp-validation-for="GalleryFiles" class="text-danger"></span>
             </div>
@@ -79,7 +78,44 @@
                 </select>
                 <span asp-validation-for="BodyTypeName" class="text-danger"></span>
             </div>
-            <input  class="btn text-black btn-info text-center " type="submit" value="Add" />
+            <input class="btn text-black btn-info text-center" type="submit" value="Add" />
         </form>
     </div>
 </div>
+
+
+<style>
+    /* Styles for form fields */
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 100%;
+    }
+
+    /* Styles for select dropdowns */
+    select.form-control {
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    /* Styles for buttons */
+    .btn {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+    /* Validation error message styles */
+    .text-danger {
+        color: red;
+    }
+</style>

@@ -30,6 +30,7 @@ namespace CarCatalog.Core.Services.Transmision
             return this.data.Transmisions
                 .Select(x => new TransmisionViewModel()
                 {
+                    TransmisionId = x.TransmisionId,
                     TransmisionType = x.TransmisionType,
                     Gears = x.Gears,
                 });

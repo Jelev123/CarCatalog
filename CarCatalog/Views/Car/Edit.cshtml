@@ -75,11 +75,10 @@
                 <span asp-validation-for="BodyTypeName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GalleryFiles"></label>
+                <label asp-for="GalleryFiles">Choose image</label>
                 <input asp-for="GalleryFiles" class="form-control" />
                 <span asp-validation-for="GalleryFiles" class="text-danger"></span>
             </div>
-
             @foreach (var item in Model.Gallery)
             {
                 <img width="400px" src="@item.URL" alt="@item.Name">

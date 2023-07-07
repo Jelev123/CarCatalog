@@ -76,6 +76,12 @@ namespace CarCatalog.Controllers.Car
             return this.RedirectToAction("GetCarById","Car", new { id = id });
         }
 
+        public IActionResult Delete(int id)
+        {
+            this.carService.DeleteCar(id);
+            return this.RedirectToAction("Index", "Home");
+        }
+
         public IActionResult GetCarById(int id) => this.View(carService.GetById(id));
 
         public IActionResult GetAllCars(int id = 1)

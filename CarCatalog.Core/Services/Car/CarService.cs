@@ -4,6 +4,7 @@ using CarCatalog.Core.ViewModels.Car;
 using CarCatalog.Infrastructure.Data;
 using CarCatalog.Infrastructure.Data.Models;
 
+
 namespace CarCatalog.Core.Services.Car
 {
     public class CarService : ICarService
@@ -35,7 +36,12 @@ namespace CarCatalog.Core.Services.Car
                 }).ToList()
             };
 
-            var transmision = new Infrastructure.Data.Models.Transmision { TransmisionType = addCar.TransmisionType, Gears = addCar.Gears };
+            var transmision = this.data.Transmisions.FirstOrDefault(t => t.TransmisionType == addCar.TransmisionType && t.Gears == addCar.Gears);
+
+            if (transmision == null)
+            {
+                transmision = new Infrastructure.Data.Models.Transmision { TransmisionType = addCar.TransmisionType, Gears = addCar.Gears };
+            }
 
             car.CarTransmisions.Add(new CarTransmision
             {
@@ -45,7 +51,13 @@ namespace CarCatalog.Core.Services.Car
                 TransmisionId = transmision.TransmisionId,
             });
 
-            var bodyType = new Infrastructure.Data.Models.BodyType { BodyTypeName = addCar.BodyTypeName, Doors = addCar.Doors };
+
+            var bodyType = this.data.BodyTypes.FirstOrDefault(b => b.BodyTypeName == addCar.BodyTypeName && b.Doors == addCar.Doors);
+
+            if (bodyType == null)
+            {
+                bodyType = new Infrastructure.Data.Models.BodyType { BodyTypeName = addCar.BodyTypeName, Doors = addCar.Doors };
+            }
 
             car.CarBodyTypes.Add(new CarBodyType
             {
@@ -63,6 +75,7 @@ namespace CarCatalog.Core.Services.Car
         {
             var car = this.data.Cars.FirstOrDefault(x => x.CarId == id);
             data.Remove(car);
+            data.SaveChanges();
         }
 
         public void EditCar(CarViewModel editCar, int id)

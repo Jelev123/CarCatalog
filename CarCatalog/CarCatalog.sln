@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarCatalog.Core", "..\CarCa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarCatalog.Infrastructure", "..\CarCatalog.Infrastructure\CarCatalog.Infrastructure.csproj", "{EBBD237B-617C-47E3-9A47-BE245A077726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarCatalog.Api", "..\CarCatalog.Api\CarCatalog.Api.csproj", "{64F8B11B-57E4-494D-BFA4-854AD4754999}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarCatalog.Api", "..\CarCatalog.Api\CarCatalog.Api.csproj", "{6A665021-C98A-490D-A435-D9869D945634}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{EBBD237B-617C-47E3-9A47-BE245A077726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBBD237B-617C-47E3-9A47-BE245A077726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBBD237B-617C-47E3-9A47-BE245A077726}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64F8B11B-57E4-494D-BFA4-854AD4754999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64F8B11B-57E4-494D-BFA4-854AD4754999}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64F8B11B-57E4-494D-BFA4-854AD4754999}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64F8B11B-57E4-494D-BFA4-854AD4754999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A665021-C98A-490D-A435-D9869D945634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A665021-C98A-490D-A435-D9869D945634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A665021-C98A-490D-A435-D9869D945634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A665021-C98A-490D-A435-D9869D945634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
