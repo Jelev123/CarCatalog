@@ -1,4 +1,5 @@
-﻿using CarCatalog.Core.Contracts.BodyType;
+﻿using CarCatalog.Core.Constants.Car;
+using CarCatalog.Core.Contracts.BodyType;
 using CarCatalog.Core.Contracts.Car;
 using CarCatalog.Core.Contracts.Door;
 using CarCatalog.Core.Contracts.Gear;
@@ -8,7 +9,6 @@ using CarCatalog.Core.ViewModels.Car;
 using CarCatalog.Core.ViewModels.Door;
 using CarCatalog.Core.ViewModels.Gear;
 using CarCatalog.Core.ViewModels.Transmision;
-using CarCatalog.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarCatalog.Controllers.Car
@@ -107,8 +107,6 @@ namespace CarCatalog.Controllers.Car
 
             ViewData["transmisions"] = carViewModels.Where(c => c.Gears != null);
             ViewData["bodyTypes"] = carViewModels.Where(c => c.Doors != null);
-            ViewData["gears"] = carViewModels;
-            ViewData["doors"] = carViewModels;
 
             var car = this.carService.GetById(id);
             return View(car);
@@ -136,14 +134,13 @@ namespace CarCatalog.Controllers.Car
                 return this.NotFound();
             }
 
-            const int ItemsPerPage = 1;
 
             var viewModel = new CarListViewModel()
             {
-                ItemsPerPage = ItemsPerPage,
+                ItemsPerPage = CarConstants.ItemsPerPage,
                 PageNumber = id,
                 CarsCount = this.carService.GetCarCount(),
-                Cars = carService.GetAll(id, ItemsPerPage)
+                Cars = carService.GetAll(id, CarConstants.ItemsPerPage)
             };
 
             return View(viewModel); 

@@ -13,18 +13,6 @@ namespace CarCatalog.Core.Services.BodyType
             this.data = data;
         }
 
-        public void AddBodyTypes(BodyTypeViewModel bodyTypeViewModel)
-        {
-            var bodyType = new Infrastructure.Data.Models.BodyType()
-            {
-                BodyTypeId = bodyTypeViewModel.BodyTypeId,
-                BodyTypeName = bodyTypeViewModel.BodyTypeName,
-            };
-
-            data.BodyTypes.Add(bodyType);
-            data.SaveChanges();
-        }
-
         public IEnumerable<BodyTypeViewModel> AllBodyTypes<T>()
         {
             return this.data.BodyTypes

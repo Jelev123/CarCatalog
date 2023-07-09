@@ -1,4 +1,4 @@
-﻿using CarCatalog.Core.Constants.Image;
+﻿using CarCatalog.Core.Constants.Car;
 using CarCatalog.Core.Contracts;
 using CarCatalog.Core.ViewModels.Car;
 using CarCatalog.Infrastructure.Data;

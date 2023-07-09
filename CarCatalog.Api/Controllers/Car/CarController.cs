@@ -1,15 +1,11 @@
-﻿using CarCatalog.Core.Constants.Image;
-using CarCatalog.Core.Contracts;
+﻿using CarCatalog.Core.Contracts;
 using CarCatalog.Core.Contracts.BodyType;
 using CarCatalog.Core.Contracts.Car;
 using CarCatalog.Core.Contracts.Transmision;
-using CarCatalog.Core.Services.Image;
 using CarCatalog.Core.ViewModels.BodyType;
 using CarCatalog.Core.ViewModels.Car;
 using CarCatalog.Core.ViewModels.Transmision;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
 
 namespace CarCatalog.Api.Controllers.Car
 {
