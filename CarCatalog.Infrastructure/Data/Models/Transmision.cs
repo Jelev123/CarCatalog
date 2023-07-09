@@ -6,6 +6,6 @@
 
         public string TransmisionType { get; set; }
 
-        public int Gears { get; set; }
+        public ICollection<TransmisionsGears> TransmisionsGears { get; set; }
     }
 }

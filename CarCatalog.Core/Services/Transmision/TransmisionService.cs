@@ -15,14 +15,14 @@ namespace CarCatalog.Core.Services.Transmision
 
         public void AddTransmisions(TransmisionViewModel transmisionViewModel)
         {
-            var transmision = new Infrastructure.Data.Models.Transmision
-            {
-                TransmisionType = transmisionViewModel.TransmisionType,
-                Gears = transmisionViewModel.Gears,
-            };
+            //var transmision = new Infrastructure.Data.Models.Transmision
+            //{
+            //    TransmisionType = transmisionViewModel.TransmisionType,
+            //    Gears = transmisionViewModel.Gears,
+            //};
 
-            this.data.Transmisions.Add(transmision);
-            this.data.SaveChanges();
+            //this.data.Transmisions.Add(transmision);
+            //this.data.SaveChanges();
         }
 
         public IEnumerable<TransmisionViewModel> AllTransmisions<T>()
@@ -32,7 +32,6 @@ namespace CarCatalog.Core.Services.Transmision
                 {
                     TransmisionId = x.TransmisionId,
                     TransmisionType = x.TransmisionType,
-                    Gears = x.Gears,
                 });
         }
     }

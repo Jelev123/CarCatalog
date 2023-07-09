@@ -17,8 +17,8 @@ namespace CarCatalog.Core.Services.BodyType
         {
             var bodyType = new Infrastructure.Data.Models.BodyType()
             {
+                BodyTypeId = bodyTypeViewModel.BodyTypeId,
                 BodyTypeName = bodyTypeViewModel.BodyTypeName,
-                Doors = bodyTypeViewModel.Doors,
             };
 
             data.BodyTypes.Add(bodyType);
@@ -30,8 +30,8 @@ namespace CarCatalog.Core.Services.BodyType
             return this.data.BodyTypes
                 .Select(s => new BodyTypeViewModel
                 {
+                    BodyTypeId= s.BodyTypeId,
                     BodyTypeName = s.BodyTypeName,
-                    Doors = s.Doors,
                 });
         }
     }

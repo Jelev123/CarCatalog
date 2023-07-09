@@ -35,54 +35,149 @@
                 <input asp-for="FuelType" class="form-control" />
             </div>
             <div class="form-group">
-                <label for="TransmisionType">Transmision</label>
-                <select id="TransmisionType" class="form-control" asp-for="TransmisionType">
-                    <option selected disabled>Select a Transmision</option>
-                    @foreach (var transmision in (IEnumerable<CarViewModel>)this.ViewData["transmisions"])
+                <label for="TransmisionType">Transmission</label>
+                <select id="TransmisionType" class="form-control" name="TransmisionId">
+                    <option selected disabled>Select a Transmission</option>
+                    @foreach (var transmision in (IEnumerable<CarViewModel>)ViewData["transmisions"])
                     {
-                        <option value="@transmision.TransmisionType">@transmision.TransmisionType</option>
+                        <option value="@transmision.TransmisionId">@transmision.TransmisionType</option>
                     }
                 </select>
-                <span asp-validation-for="TransmisionType" class="text-danger"></span>
+                <span asp-validation-for="TransmisionId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="TransmisionType">Gears</label>
-                <select id="TransmisionType" class="form-control" asp-for="Gears">
-                    <option selected disabled>Select a Gears</option>
-                    @foreach (var transmision in (IEnumerable<CarViewModel>)this.ViewData["transmisions"])
-                    {
-                        <option value="@transmision.Gears">@transmision.Gears</option>
-                    }
+                <label for="Gears">Gears</label>
+                <select id="Gears" class="form-control" name="GearId" disabled>
+                    <option selected disabled>Select a Transmission first</option>
                 </select>
-                <span asp-validation-for="TransmisionType" class="text-danger"></span>
+                <span asp-validation-for="GearId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="BodyType">BodyType</label>
-                <select id="BodyType" class="form-control" asp-for="BodyTypeName">
+                <select id="BodyType" class="form-control" name="BodyTypeId">
                     <option selected disabled>Select a BodyType</option>
-                    @foreach (var bodyType in (IEnumerable<CarViewModel>)this.ViewData["bodyTypes"])
+                    @foreach (var bodyType in (IEnumerable<CarViewModel>)ViewData["bodyTypes"])
                     {
-                        <option value="@bodyType.BodyTypeName">@bodyType.BodyTypeName</option>
+                        <option value="@bodyType.BodyTypeId">@bodyType.BodyTypeName</option>
                     }
                 </select>
-                <span asp-validation-for="BodyTypeName" class="text-danger"></span>
+                <span asp-validation-for="BodyTypeId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="BodyType">Doors</label>
-                <select id="BodyType" class="form-control" asp-for="Doors">
-                    <option selected disabled>Select a Doors</option>
-                    @foreach (var bodyType in (IEnumerable<CarViewModel>)this.ViewData["bodyTypes"])
-                    {
-                        <option value="@bodyType.Doors">@bodyType.Doors</option>
-                    }
+                <label for="Doors">Doors</label>
+                <select id="Doors" class="form-control" name="DoorId" disabled>
+                    <option selected disabled>Select a BodyType first</option>
                 </select>
-                <span asp-validation-for="BodyTypeName" class="text-danger"></span>
+                <span asp-validation-for="DoorId" class="text-danger"></span>
             </div>
+
             <input class="btn text-black btn-info text-center" type="submit" value="Add" />
         </form>
     </div>
 </div>
 
+@section Scripts {
+
+    <script>
+        $(document).ready(function () {
+            $('#TransmisionType').change(function () {
+                var selectedTransmisionId = $(this).val();
+                if (selectedTransmisionId) {
+                    updateGearsOptions(selectedTransmisionId);
+                } else {
+                    $('#Gears').empty().prop('disabled', true);
+                }
+            });
+
+            $('#Gears').change(function () {
+                var selectedGearValue = $(this).val();
+                if (selectedGearValue) {
+                    var selectedGearId = findGearIdByValue(selectedGearValue);
+                    $('#GearId').val(selectedGearId); // Update the hidden input field
+                }
+            });
+
+            $('#BodyType').change(function () {
+                var selectedBodyTypeId = $(this).val();
+                if (selectedBodyTypeId) {
+                    updateDoorsOptions(selectedBodyTypeId);
+                } else {
+                    $('#Doors').empty().prop('disabled', true);
+                }
+            });
+
+            $('#Doors').change(function () {
+                var selectedDoorCount = $(this).val();
+                if (selectedDoorCount) {
+                    var selectedDoorId = findDoorIdByCount(selectedDoorCount);
+                    $('#DoorId').val(selectedDoorId); // Update the hidden input field
+                }
+            });
+        });
+
+        function updateGearsOptions(selectedTransmisionId) {
+            $.ajax({
+                url: '/Gear/GetGearsForTransmissionId',
+                type: 'GET',
+                data: { transmisionId: selectedTransmisionId },
+                success: function (gears) {
+                    var gearsDropdown = $('#Gears');
+                    console.log(gears);
+                    gearsDropdown.empty();
+                    gearsDropdown.append('<option selected disabled>Select a Gear</option>');
+                    $.each(gears, function (index, gear) {
+                        gearsDropdown.append($('<option></option>').val(gear.gearId).text(gear.value));
+                    });
+                    gearsDropdown.prop('disabled', false);
+                }
+            });
+        }
+
+
+        function updateDoorsOptions(selectedBodyTypeId) {
+            $.ajax({
+                url: '/Door/GetDoorsByBodyTypeId',
+                type: 'GET',
+                data: { bodyTypeId: selectedBodyTypeId },
+                success: function (doors) {
+                    var doorsDropdown = $('#Doors');
+                    console.log(doors);
+                    doorsDropdown.empty();
+                    doorsDropdown.append('<option selected disabled>Select a Door</option>');
+                    $.each(doors, function (index, door) {
+                        doorsDropdown.append($('<option></option>').val(door.doorId).text(door.doorsCount));
+                    });
+                    doorsDropdown.prop('disabled', false);
+                }
+            });
+        }
+
+        function findGearIdByValue(gearValue) {
+            var gears = @Html.Raw(Json.Serialize(ViewData["transmisions"]));
+            for (var i = 0; i < gears.length; i++) {
+                if (gears[i].GearValue === gearValue) {
+                    return gears[i].GearId;
+                }
+            }
+            return null;
+        }
+
+        function findDoorIdByCount(doorCount) {
+            var bodyTypes = @Html.Raw(Json.Serialize(ViewData["bodyTypes"]));
+            for (var i = 0; i < bodyTypes.length; i++) {
+                var doors = bodyTypes[i].Doors;
+                for (var j = 0; j < doors.length; j++) {
+                    if (doors[j].DoorCount === doorCount) {
+                        return doors[j].DoorId;
+                    }
+                }
+            }
+            return null;
+        }
+
+
+    </script>
+}
 
 <style>
     /* Styles for form fields */

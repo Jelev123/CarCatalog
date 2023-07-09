@@ -20,5 +20,8 @@
 
         public ICollection<CarBodyType> CarBodyTypes { get; set; } = new HashSet<CarBodyType>();
 
+        public ICollection<CarDoors> CarDoors { get; set; } = new HashSet<CarDoors>();
+
+        public ICollection<CarGears> CarGears { get; set; } = new HashSet<CarGears>();
     }
 }

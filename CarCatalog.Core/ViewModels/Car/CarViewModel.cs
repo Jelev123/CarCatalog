@@ -1,7 +1,6 @@
-﻿using CarCatalog.Core.ViewModels.BodyType;
-using CarCatalog.Core.ViewModels.Transmision;
+﻿using CarCatalog.Core.ViewModels.Door;
+using CarCatalog.Core.ViewModels.Gear;
 using Microsoft.AspNetCore.Http;
-using System.Collections.ObjectModel;
 
 namespace CarCatalog.Core.ViewModels.Car
 {
@@ -22,11 +21,23 @@ namespace CarCatalog.Core.ViewModels.Car
 
         public string TransmisionType { get; set; }
 
-        public int Gears { get; set; }
+        public int TransmisionId { get; set; }
+
+        public List<GearViewModel> Gears { get; set; }
+
+        public int GearId { get; set; }
+
+        public int DoorId { get; set; }
+
+        public int DoorCount { get; set; }
+
+        public int GearCount { get; set; }
 
         public string BodyTypeName { get; set; }
 
-        public int Doors { get; set; }
+        public int BodyTypeId { get; set; }
+
+        public List<DoorViewModel> Doors { get; set; }
 
         public int HorsePower { get; set; }
 

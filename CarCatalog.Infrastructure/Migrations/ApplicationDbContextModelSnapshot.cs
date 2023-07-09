@@ -33,12 +33,32 @@ namespace CarCatalog.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Doors")
-                        .HasColumnType("int");
-
                     b.HasKey("BodyTypeId");
 
                     b.ToTable("BodyTypes");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.BodyTypesDoors", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BodyTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BodyTypeId");
+
+                    b.HasIndex("DoorId");
+
+                    b.ToTable("BodyTypesDoors");
                 });
 
             modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Car", b =>
@@ -95,6 +115,52 @@ namespace CarCatalog.Infrastructure.Migrations
                     b.ToTable("CarBodyTypes");
                 });
 
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.CarDoors", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("DoorId");
+
+                    b.ToTable("CarDoors");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.CarGears", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GearId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("GearId");
+
+                    b.ToTable("CarGears");
+                });
+
             modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.CarTransmision", b =>
                 {
                     b.Property<int>("Id")
@@ -116,6 +182,38 @@ namespace CarCatalog.Infrastructure.Migrations
                     b.HasIndex("TransmisionId");
 
                     b.ToTable("CarTransmisions");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Door", b =>
+                {
+                    b.Property<int>("DoorId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DoorId"), 1L, 1);
+
+                    b.Property<int>("DoorCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("DoorId");
+
+                    b.ToTable("Doors");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Gears", b =>
+                {
+                    b.Property<int>("GearId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GearId"), 1L, 1);
+
+                    b.Property<int>("Value")
+                        .HasColumnType("int");
+
+                    b.HasKey("GearId");
+
+                    b.ToTable("Gears");
                 });
 
             modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Images", b =>
@@ -148,9 +246,6 @@ namespace CarCatalog.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransmisionId"), 1L, 1);
 
-                    b.Property<int>("Gears")
-                        .HasColumnType("int");
-
                     b.Property<string>("TransmisionType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -158,6 +253,48 @@ namespace CarCatalog.Infrastructure.Migrations
                     b.HasKey("TransmisionId");
 
                     b.ToTable("Transmisions");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.TransmisionsGears", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("GearId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TransmisionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GearId");
+
+                    b.HasIndex("TransmisionId");
+
+                    b.ToTable("TransmisionsGears");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.BodyTypesDoors", b =>
+                {
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.BodyType", "BodyType")
+                        .WithMany("BodyTypesDoors")
+                        .HasForeignKey("BodyTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.Door", "Door")
+                        .WithMany("BodyTypesDoors")
+                        .HasForeignKey("DoorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BodyType");
+
+                    b.Navigation("Door");
                 });
 
             modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.CarBodyType", b =>
@@ -177,6 +314,44 @@ namespace CarCatalog.Infrastructure.Migrations
                     b.Navigation("BodyType");
 
                     b.Navigation("Car");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.CarDoors", b =>
+                {
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.Car", "Car")
+                        .WithMany("CarDoors")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.Door", "Door")
+                        .WithMany()
+                        .HasForeignKey("DoorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("Door");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.CarGears", b =>
+                {
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.Car", "Car")
+                        .WithMany("CarGears")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.Gears", "Gear")
+                        .WithMany()
+                        .HasForeignKey("GearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("Gear");
                 });
 
             modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.CarTransmision", b =>
@@ -209,13 +384,56 @@ namespace CarCatalog.Infrastructure.Migrations
                     b.Navigation("Car");
                 });
 
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.TransmisionsGears", b =>
+                {
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.Gears", "Gear")
+                        .WithMany("Transmisions")
+                        .HasForeignKey("GearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CarCatalog.Infrastructure.Data.Models.Transmision", "Transmision")
+                        .WithMany("TransmisionsGears")
+                        .HasForeignKey("TransmisionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gear");
+
+                    b.Navigation("Transmision");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.BodyType", b =>
+                {
+                    b.Navigation("BodyTypesDoors");
+                });
+
             modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Car", b =>
                 {
                     b.Navigation("CarBodyTypes");
 
+                    b.Navigation("CarDoors");
+
+                    b.Navigation("CarGears");
+
                     b.Navigation("CarTransmisions");
 
                     b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Door", b =>
+                {
+                    b.Navigation("BodyTypesDoors");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Gears", b =>
+                {
+                    b.Navigation("Transmisions");
+                });
+
+            modelBuilder.Entity("CarCatalog.Infrastructure.Data.Models.Transmision", b =>
+                {
+                    b.Navigation("TransmisionsGears");
                 });
 #pragma warning restore 612, 618
         }

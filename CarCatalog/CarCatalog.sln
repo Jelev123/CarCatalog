@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarCatalog.Core", "..\CarCa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarCatalog.Infrastructure", "..\CarCatalog.Infrastructure\CarCatalog.Infrastructure.csproj", "{EBBD237B-617C-47E3-9A47-BE245A077726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarCatalog.Api", "..\CarCatalog.Api\CarCatalog.Api.csproj", "{6A665021-C98A-490D-A435-D9869D945634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarCatalog.Api", "..\CarCatalog.Api\CarCatalog.Api.csproj", "{6A665021-C98A-490D-A435-D9869D945634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D74762A-38C6-4CD3-A959-2177EF1C0A6A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

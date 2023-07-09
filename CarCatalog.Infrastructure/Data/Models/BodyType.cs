@@ -6,6 +6,6 @@
 
         public string BodyTypeName { get; set; }
 
-        public int Doors { get; set; }
+        public ICollection<BodyTypesDoors> BodyTypesDoors { get; set; } = new HashSet<BodyTypesDoors>();
     }
 }

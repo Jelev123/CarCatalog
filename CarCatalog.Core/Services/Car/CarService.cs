@@ -3,6 +3,7 @@ using CarCatalog.Core.Contracts.Car;
 using CarCatalog.Core.ViewModels.Car;
 using CarCatalog.Infrastructure.Data;
 using CarCatalog.Infrastructure.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace CarCatalog.Core.Services.Car
@@ -36,36 +37,56 @@ namespace CarCatalog.Core.Services.Car
                 }).ToList()
             };
 
-            var transmision = this.data.Transmisions.FirstOrDefault(t => t.TransmisionType == addCar.TransmisionType && t.Gears == addCar.Gears);
+            var transmision = this.data.TransmisionsGears.FirstOrDefault(t => t.GearId == addCar.GearId);
 
-            if (transmision == null)
+            if (transmision != null)
             {
-                transmision = new Infrastructure.Data.Models.Transmision { TransmisionType = addCar.TransmisionType, Gears = addCar.Gears };
+                car.CarTransmisions.Add(new CarTransmision
+                {
+                    Transmision = transmision.Transmision,
+                    CarId = car.CarId,
+                    TransmisionId = addCar.TransmisionId,
+                });
             }
+            
+            var bodyType = this.data.BodyTypesDoors.FirstOrDefault(b => b.BodyTypeId == addCar.BodyTypeId);
 
-            car.CarTransmisions.Add(new CarTransmision
+            if (bodyType != null)
             {
-                Transmision = transmision,
-                Car = car,
-                CarId = car.CarId,
-                TransmisionId = transmision.TransmisionId,
-            });
-
-
-            var bodyType = this.data.BodyTypes.FirstOrDefault(b => b.BodyTypeName == addCar.BodyTypeName && b.Doors == addCar.Doors);
-
-            if (bodyType == null)
-            {
-                bodyType = new Infrastructure.Data.Models.BodyType { BodyTypeName = addCar.BodyTypeName, Doors = addCar.Doors };
+                car.CarBodyTypes.Add(new CarBodyType
+                {
+                    BodyType = bodyType.BodyType,
+                    CarId = car.CarId,
+                    BodyTypeId = addCar.BodyTypeId,
+                });
             }
+           
+            var carDoors = this.data.Doors.FirstOrDefault(d => d.DoorId == addCar.DoorId);
 
-            car.CarBodyTypes.Add(new CarBodyType
+            if(carDoors != null)
             {
-                BodyType = bodyType,
-                BodyTypeId = bodyType.BodyTypeId,
-                Car = car,
-                CarId = car.CarId,
-            });
+                if (carDoors != null)
+                {
+                    car.CarDoors.Add(new CarDoors
+                    {
+                        CarId = car.CarId,
+                        DoorId = addCar.DoorId,
+                        Door = carDoors
+                    });
+                }
+            }
+          
+            var carGears = this.data.Gears.FirstOrDefault(g => g.GearId == addCar.GearId);
+            
+            if (carGears != null)
+            {
+                car.CarGears.Add(new CarGears
+                {
+                    CarId = car.CarId,
+                    GearId = addCar.GearId,
+                    Gear = carGears
+                });
+            }
 
             this.data.Cars.Add(car);
             this.data.SaveChanges();
@@ -81,9 +102,18 @@ namespace CarCatalog.Core.Services.Car
         public void EditCar(CarViewModel editCar, int id)
         {
             imageService.CheckGallery(editCar);
-            var car = this.data.Cars.FirstOrDefault(x => x.CarId == id);
-            var transmision = this.data.Transmisions.FirstOrDefault(s => s.TransmisionType == editCar.TransmisionType);
-            var bodyType = this.data.BodyTypes.FirstOrDefault(s => s.BodyTypeName == editCar.BodyTypeName);
+
+            var car = this.data.Cars
+                 .Include(c => c.CarTransmisions)
+                     .ThenInclude(ct => ct.Transmision)
+                 .Include(c => c.CarBodyTypes)
+                     .ThenInclude(cb => cb.BodyType)
+                 .Include(c => c.CarGears)
+                     .ThenInclude(cg => cg.Gear)
+                 .Include(c => c.CarDoors)
+                     .ThenInclude(cd => cd.Door)
+                 .FirstOrDefault(x => x.CarId == id);
+
 
             if (car != null)
             {
@@ -92,10 +122,75 @@ namespace CarCatalog.Core.Services.Car
                 car.Year = editCar.Year;
                 car.HorsePower = editCar.HorsePower;
                 car.FuelType = editCar.FuelType;
-                bodyType.BodyTypeName = editCar.BodyTypeName;
-                bodyType.Doors = editCar.Doors;
-                transmision.TransmisionType = editCar.TransmisionType;
-                transmision.Gears = editCar.Gears;
+
+
+                var transmision = car.CarTransmisions.FirstOrDefault();
+                if (transmision != null)
+                {
+                    if (editCar.TransmisionId != 0)
+                    {
+                        car.CarTransmisions.Remove(transmision);
+
+                        var newTransmision = new CarTransmision
+                        {
+                            TransmisionId = editCar.TransmisionId,
+                            CarId = car.CarId
+                        };
+
+                        car.CarTransmisions.Add(newTransmision);
+                    }
+                }
+
+                var bodyType = car.CarBodyTypes.FirstOrDefault();
+                if (bodyType != null)
+                {
+                    if (editCar.BodyTypeId != 0)
+                    {
+                        car.CarBodyTypes.Remove(bodyType);
+
+                        var newBodyType = new CarBodyType
+                        {
+                            BodyTypeId = editCar.BodyTypeId,
+                            CarId = car.CarId
+                        };
+
+                        car.CarBodyTypes.Add(newBodyType);
+                    }
+                }
+
+                var door = car.CarDoors.FirstOrDefault();
+                if (door != null)
+                {
+                    if (editCar.DoorId != 0)
+                    {
+                        car.CarDoors.Remove(door);
+
+                        var newDoor = new CarDoors
+                        {
+                            DoorId = editCar.DoorId,
+                            CarId = car.CarId
+                        };
+
+                        car.CarDoors.Add(newDoor);
+                    }
+                }
+
+                var gear = car.CarGears.FirstOrDefault();
+                if (gear != null)
+                {
+
+                    if (editCar.GearId != 0)
+                    {
+                        car.CarGears.Remove(gear);
+                        var newGear = new CarGears
+                        {
+                            GearId = editCar.GearId,
+                            CarId = car.CarId
+                        };
+
+                        car.CarGears.Add(newGear);
+                    }
+                }
 
                 if (editCar.GalleryFiles != null)
                 {
@@ -126,18 +221,24 @@ namespace CarCatalog.Core.Services.Car
                     CarBrand = car.CarBrand,
                     CarModel = car.CarModel,
                     Year = car.Year,
-                    HorsePower = car.HorsePower,
-                    FuelType = car.FuelType,
-                    BodyTypeName = car.CarBodyTypes.FirstOrDefault().BodyType.BodyTypeName,
-                    Doors = car.CarBodyTypes.FirstOrDefault().BodyType.Doors,
-                    TransmisionType = car.CarTransmisions.FirstOrDefault().Transmision.TransmisionType,
-                    Gears = car.CarTransmisions.FirstOrDefault().Transmision.Gears,
                     CoverPhoto = car.Images.FirstOrDefault().URL,
                 }).Skip((page - 1) * itemsPerPage).Take(itemsPerPage);
         }
 
         public CarViewModel GetById(int id)
         {
+            var doorCount = (from carDoor in this.data.CarDoors
+                             join door in this.data.Doors on carDoor.DoorId equals door.DoorId
+                             where carDoor.CarId == id
+                             select door.DoorCount)
+                 .FirstOrDefault();
+
+            var gearCount = (from carGear in this.data.CarGears
+                             join gear in this.data.Gears on carGear.GearId equals gear.GearId
+                             where carGear.CarId == id
+                             select gear.Value)
+                             .FirstOrDefault();
+
             return this.data.Cars
                 .Where(car => car.CarId == id)
                 .Select(car => new CarViewModel()
@@ -149,9 +250,9 @@ namespace CarCatalog.Core.Services.Car
                     HorsePower = car.HorsePower,
                     FuelType = car.FuelType,
                     BodyTypeName = car.CarBodyTypes.FirstOrDefault().BodyType.BodyTypeName,
-                    Doors = car.CarBodyTypes.FirstOrDefault().BodyType.Doors,
+                    DoorCount = doorCount,
                     TransmisionType = car.CarTransmisions.FirstOrDefault().Transmision.TransmisionType,
-                    Gears = car.CarTransmisions.FirstOrDefault().Transmision.Gears,
+                    GearCount = gearCount,
                     Gallery = car.Images.Select(img => new CarGalleryModel
                     {
                         ImageId = img.ImageId,
