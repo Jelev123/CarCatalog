@@ -12,10 +12,10 @@ namespace CarCatalog.Controllers.Image
             this.imageService = imageService;
         }
 
-        public IActionResult DeleteImage(string id, int productId)
+        public IActionResult DeleteImage(string id, int carId)
         {
             this.imageService.DeleteImage(id);
-            return this.RedirectToAction("Edit", "Car", new { id = productId });
+            return this.RedirectToAction("Edit", "Car", new { id = carId });
         }
     }
 }

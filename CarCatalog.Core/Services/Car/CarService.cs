@@ -231,13 +231,13 @@ namespace CarCatalog.Core.Services.Car
                              join door in this.data.Doors on carDoor.DoorId equals door.DoorId
                              where carDoor.CarId == id
                              select door.DoorCount)
-                 .FirstOrDefault();
+                            .FirstOrDefault();
 
             var gearCount = (from carGear in this.data.CarGears
                              join gear in this.data.Gears on carGear.GearId equals gear.GearId
                              where carGear.CarId == id
                              select gear.Value)
-                             .FirstOrDefault();
+                            .FirstOrDefault();
 
             return this.data.Cars
                 .Where(car => car.CarId == id)

@@ -134,7 +134,6 @@ namespace CarCatalog.Controllers.Car
                 return this.NotFound();
             }
 
-
             var viewModel = new CarListViewModel()
             {
                 ItemsPerPage = CarConstants.ItemsPerPage,

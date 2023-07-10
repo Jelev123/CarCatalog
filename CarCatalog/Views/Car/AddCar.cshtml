@@ -122,7 +122,6 @@
                 data: { transmisionId: selectedTransmisionId },
                 success: function (gears) {
                     var gearsDropdown = $('#Gears');
-                    console.log(gears);
                     gearsDropdown.empty();
                     gearsDropdown.append('<option selected disabled>Select a Gear</option>');
                     $.each(gears, function (index, gear) {
@@ -141,7 +140,6 @@
                 data: { bodyTypeId: selectedBodyTypeId },
                 success: function (doors) {
                     var doorsDropdown = $('#Doors');
-                    console.log(doors);
                     doorsDropdown.empty();
                     doorsDropdown.append('<option selected disabled>Select a Door</option>');
                     $.each(doors, function (index, door) {
@@ -165,16 +163,12 @@
         function findDoorIdByCount(doorCount) {
             var bodyTypes = @Html.Raw(Json.Serialize(ViewData["bodyTypes"]));
             for (var i = 0; i < bodyTypes.length; i++) {
-                var doors = bodyTypes[i].Doors;
-                for (var j = 0; j < doors.length; j++) {
-                    if (doors[j].DoorCount === doorCount) {
-                        return doors[j].DoorId;
+                    if (doors[i].DoorCount === doorCount) {
+                        return doors[i].DoorId;
                     }
-                }
             }
             return null;
         }
-
 
     </script>
 }

@@ -4,7 +4,7 @@
 
 namespace CarCatalog.Infrastructure.Migrations
 {
-    public partial class adsadwqsdssssssw : Migration
+    public partial class createDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

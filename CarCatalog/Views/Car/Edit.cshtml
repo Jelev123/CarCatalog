@@ -74,7 +74,7 @@
             @foreach (var item in Model.Gallery)
             {
                 <img width="400px" src="@item.URL" alt="@item.Name">
-                <a asp-action="DeleteImage" asp-controller="Image" asp-route-id="@item.ImageId" asp-route-productId="@item.CarId" class="btn btn-danger">Delete</a>
+                <a asp-action="DeleteImage" asp-controller="Image" asp-route-id="@item.ImageId" asp-route-carId="@item.CarId" class="btn btn-danger">Delete</a>
             }
             <div class="d-flex justify-content-center mt-3">
                 <button class="btn btn-primary font-weight-bold">Edit</button>
