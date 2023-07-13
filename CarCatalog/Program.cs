@@ -3,12 +3,14 @@ using CarCatalog.Core.Contracts.BodyType;
 using CarCatalog.Core.Contracts.Car;
 using CarCatalog.Core.Contracts.Door;
 using CarCatalog.Core.Contracts.Gear;
+using CarCatalog.Core.Contracts.GetCarViewModel;
 using CarCatalog.Core.Contracts.Transmision;
 using CarCatalog.Core.Models;
 using CarCatalog.Core.Services.BodyType;
 using CarCatalog.Core.Services.Car;
 using CarCatalog.Core.Services.Door;
 using CarCatalog.Core.Services.Gear;
+using CarCatalog.Core.Services.GetCarViewModel;
 using CarCatalog.Core.Services.Image;
 using CarCatalog.Core.Services.Transmision;
 using CarCatalog.Infrastructure.Data;
@@ -31,6 +33,7 @@ builder.Services.AddTransient<IBodyTypeService, BodyTypeService>();
 builder.Services.AddTransient<IImageService, ImageService>();
 builder.Services.AddTransient<IGearService, GearService>();
 builder.Services.AddTransient<IDoorService, DoorService>();
+builder.Services.AddTransient<ICarViewModel, CarViewModelService>();
 
 
 var app = builder.Build();

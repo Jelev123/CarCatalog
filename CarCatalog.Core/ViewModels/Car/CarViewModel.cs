@@ -26,12 +26,11 @@ namespace CarCatalog.Core.ViewModels.Car
         public string CoverPhoto { get; set; }
 
         [Required(ErrorMessage = "Please enter the transmision.")]
-
         public string TransmisionType { get; set; }
 
         public int TransmisionId { get; set; }
-        [Required(ErrorMessage = "Please enter the gear.")]
 
+        [Required(ErrorMessage = "Please enter the gear.")]
         public List<GearViewModel> Gears { get; set; }
 
         public int GearId { get; set; }
@@ -53,9 +52,5 @@ namespace CarCatalog.Core.ViewModels.Car
         public int HorsePower { get; set; }
 
         public string FuelType { get; set; }
-
-        public List<CarViewModel> Transmisions { get; set; }
-        public List<CarViewModel> BodyTypes { get; set; }
-
     }
 }
