@@ -4,6 +4,6 @@ namespace CarCatalog.Core.Contracts.Door
 {
     public interface IDoorService
     {
-        List<DoorViewModel> GetDoorsByBodyTypeId(int bodyTypeId);
+        Task<List<DoorViewModel>> GetDoorsByBodyTypeIdAsync(int bodyTypeId);
     }
 }

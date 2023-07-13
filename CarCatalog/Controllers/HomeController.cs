@@ -14,11 +14,11 @@ namespace CarCatalog.Controllers
             this.carService = carService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var randomCars = new HomeViewModel()
             {
-                RandomCars = this.carService.RandomCars(6)
+                RandomCars = await this.carService.RandomCarsAsync(6)
             };
 
             return View(randomCars);

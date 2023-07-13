@@ -13,6 +13,6 @@ namespace CarCatalog.Controllers.Door
         }
 
         [HttpGet]
-        public IActionResult GetDoorsByBodyTypeId(int bodyTypeId) => Json(doorService.GetDoorsByBodyTypeId(bodyTypeId));
+        public async Task<IActionResult> GetDoorsByBodyTypeIdAsync(int bodyTypeId) => Json(await this.doorService.GetDoorsByBodyTypeIdAsync(bodyTypeId));
     }
 }

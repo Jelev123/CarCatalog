@@ -48,6 +48,102 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\0b3dc597-dd5b-4cdf-8b8a-9dde43e4c035_10-porsche-718-cayman-gt4-rs-top-10.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarCatalog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarCatalog</BasePath>
+      <RelativePath>images/carImages/0b3dc597-dd5b-4cdf-8b8a-9dde43e4c035_10-porsche-718-cayman-gt4-rs-top-10.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\0b3dc597-dd5b-4cdf-8b8a-9dde43e4c035_10-porsche-718-cayman-gt4-rs-top-10.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\4c0d6933-03ef-4605-9ead-438fa354e056_10-porsche-718-cayman-gt4-rs-top-10.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarCatalog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarCatalog</BasePath>
+      <RelativePath>images/carImages/4c0d6933-03ef-4605-9ead-438fa354e056_10-porsche-718-cayman-gt4-rs-top-10.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\4c0d6933-03ef-4605-9ead-438fa354e056_10-porsche-718-cayman-gt4-rs-top-10.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\71bcb1d6-727b-4829-8901-3fd39688e310_McLaren Artura.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarCatalog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarCatalog</BasePath>
+      <RelativePath>images/carImages/71bcb1d6-727b-4829-8901-3fd39688e310_McLaren Artura.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\71bcb1d6-727b-4829-8901-3fd39688e310_McLaren Artura.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\7866ea6b-b782-44d6-961b-02426ad1fcc0_18015-MC20BluInfinito-scaled-e1666008987698.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarCatalog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarCatalog</BasePath>
+      <RelativePath>images/carImages/7866ea6b-b782-44d6-961b-02426ad1fcc0_18015-MC20BluInfinito-scaled-e1666008987698.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\7866ea6b-b782-44d6-961b-02426ad1fcc0_18015-MC20BluInfinito-scaled-e1666008987698.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\a0e56c42-7381-4841-9507-81e66e31dd87_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarCatalog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarCatalog</BasePath>
+      <RelativePath>images/carImages/a0e56c42-7381-4841-9507-81e66e31dd87_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\a0e56c42-7381-4841-9507-81e66e31dd87_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\e40c9ed5-e5ba-4470-83f0-6c9a3794266b_18015-MC20BluInfinito-scaled-e1666008987698.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarCatalog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarCatalog</BasePath>
+      <RelativePath>images/carImages/e40c9ed5-e5ba-4470-83f0-6c9a3794266b_18015-MC20BluInfinito-scaled-e1666008987698.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\e40c9ed5-e5ba-4470-83f0-6c9a3794266b_18015-MC20BluInfinito-scaled-e1666008987698.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\.eslintrc.json))">
       <SourceType>Package</SourceType>
       <SourceId>CarCatalog</SourceId>

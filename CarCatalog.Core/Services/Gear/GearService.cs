@@ -1,6 +1,7 @@
 ﻿using CarCatalog.Core.Contracts.Gear;
 using CarCatalog.Core.ViewModels.Gear;
 using CarCatalog.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarCatalog.Core.Services.Gear
 {
@@ -13,16 +14,16 @@ namespace CarCatalog.Core.Services.Gear
             this.data = data;
         }
 
-        public List<GearViewModel> GetGearsForTransmissionId(int transmisionId)
+        public async Task<List<GearViewModel>> GetGearsForTransmissionIdAsync(int transmisionId)
         {
-            return this.data.TransmisionsGears
+            return await this.data.TransmisionsGears
                 .Where(tg => tg.TransmisionId == transmisionId)
                 .Select(tg => new GearViewModel
                 {
                     GearId = tg.GearId,
                     Value = tg.Gear.Value,
                 })
-                .ToList();
+                .ToListAsync();
         }
     }
 }

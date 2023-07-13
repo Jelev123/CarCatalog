@@ -13,6 +13,6 @@ namespace CarCatalog.Controllers.Gear
         }
 
         [HttpGet]
-        public IActionResult GetGearsForTransmissionId(int transmisionId) => Json(this.gearService.GetGearsForTransmissionId(transmisionId));
+        public async Task<IActionResult> GetGearsForTransmissionIdAsync(int transmisionId) => Json(await this.gearService.GetGearsForTransmissionIdAsync(transmisionId));
     }
 }

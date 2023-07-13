@@ -13,7 +13,7 @@ namespace CarCatalog.Core.Services.BodyType
             this.data = data;
         }
 
-        public IEnumerable<BodyTypeViewModel> AllBodyTypes<T>()
+        public async Task<IEnumerable<BodyTypeViewModel>> AllBodyTypesAsync<T>()
         {
             return this.data.BodyTypes
                 .Select(s => new BodyTypeViewModel

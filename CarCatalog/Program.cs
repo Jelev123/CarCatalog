@@ -12,9 +12,7 @@ using CarCatalog.Core.Services.Gear;
 using CarCatalog.Core.Services.Image;
 using CarCatalog.Core.Services.Transmision;
 using CarCatalog.Infrastructure.Data;
-using CloudinaryDotNet;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 

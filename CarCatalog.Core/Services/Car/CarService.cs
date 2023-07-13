@@ -19,9 +19,9 @@ namespace CarCatalog.Core.Services.Car
             this.imageService = imageService;
         }
 
-        public void AddCars(CarViewModel addCar)
+        public async Task AddCarsAsync(CarViewModel addCar)
         {
-            this.imageService.CheckGallery(addCar);
+            await this.imageService.CheckGalleryAsync(addCar);
             var car = new Infrastructure.Data.Models.Car()
             {
                 CarBrand = addCar.CarBrand,
@@ -48,7 +48,7 @@ namespace CarCatalog.Core.Services.Car
                     TransmisionId = addCar.TransmisionId,
                 });
             }
-            
+
             var bodyType = this.data.BodyTypesDoors.FirstOrDefault(b => b.BodyTypeId == addCar.BodyTypeId);
 
             if (bodyType != null)
@@ -60,10 +60,10 @@ namespace CarCatalog.Core.Services.Car
                     BodyTypeId = addCar.BodyTypeId,
                 });
             }
-           
+
             var carDoors = this.data.Doors.FirstOrDefault(d => d.DoorId == addCar.DoorId);
 
-            if(carDoors != null)
+            if (carDoors != null)
             {
                 if (carDoors != null)
                 {
@@ -75,9 +75,9 @@ namespace CarCatalog.Core.Services.Car
                     });
                 }
             }
-          
+
             var carGears = this.data.Gears.FirstOrDefault(g => g.GearId == addCar.GearId);
-            
+
             if (carGears != null)
             {
                 car.CarGears.Add(new CarGears
@@ -88,20 +88,20 @@ namespace CarCatalog.Core.Services.Car
                 });
             }
 
-            this.data.Cars.Add(car);
-            this.data.SaveChanges();
+            await this.data.Cars.AddAsync(car);
+            await this.data.SaveChangesAsync();
         }
 
-        public void DeleteCar(int id)
+        public async Task DeleteCarAsync(int id)
         {
             var car = this.data.Cars.FirstOrDefault(x => x.CarId == id);
             data.Remove(car);
-            data.SaveChanges();
+            await data.SaveChangesAsync();
         }
 
-        public void EditCar(CarViewModel editCar, int id)
+        public async Task EditCarAsync(CarViewModel editCar, int id)
         {
-            imageService.CheckGallery(editCar);
+            await imageService.CheckGalleryAsync(editCar);
 
             var car = this.data.Cars
                  .Include(c => c.CarTransmisions)
@@ -208,13 +208,13 @@ namespace CarCatalog.Core.Services.Car
                     }
                 }
                 data.Update(car);
-                data.SaveChanges();
+                await data.SaveChangesAsync();
             }
         }
 
-        public IEnumerable<CarViewModel> GetAll(int page, int itemsPerPage)
+        public async Task<IEnumerable<CarViewModel>> GetAllAsync(int page, int itemsPerPage)
         {
-            return this.data.Cars
+            var cars = await this.data.Cars
                 .Select(car => new CarViewModel()
                 {
                     Id = car.CarId,
@@ -222,10 +222,15 @@ namespace CarCatalog.Core.Services.Car
                     CarModel = car.CarModel,
                     Year = car.Year,
                     CoverPhoto = car.Images.FirstOrDefault().URL,
-                }).Skip((page - 1) * itemsPerPage).Take(itemsPerPage);
+                })
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .ToListAsync();
+
+            return cars;
         }
 
-        public CarViewModel GetById(int id)
+        public async Task<CarViewModel> GetByIdAsync(int id)
         {
             var doorCount = (from carDoor in this.data.CarDoors
                              join door in this.data.Doors on carDoor.DoorId equals door.DoorId
@@ -239,7 +244,7 @@ namespace CarCatalog.Core.Services.Car
                              select gear.Value)
                             .FirstOrDefault();
 
-            return this.data.Cars
+            return await this.data.Cars
                 .Where(car => car.CarId == id)
                 .Select(car => new CarViewModel()
                 {
@@ -260,18 +265,18 @@ namespace CarCatalog.Core.Services.Car
                         URL = img.URL,
                         CarId = car.CarId,
                     }).ToList(),
-                }).FirstOrDefault();
+                }).FirstOrDefaultAsync();
 
         }
 
-        public int GetCarCount()
+        public async Task<int> GetCarCountAsync()
         {
-            return this.data.Cars.Count();
+            return await this.data.Cars.CountAsync();
         }
 
-        public IEnumerable<RandomCars> RandomCars(int count)
+        public async Task<IEnumerable<RandomCars>> RandomCarsAsync(int count)
         {
-            return this.data.Cars
+            return await this.data.Cars
                .OrderBy(s => Guid.NewGuid())
                .Select(car => new RandomCars()
                {
@@ -280,8 +285,8 @@ namespace CarCatalog.Core.Services.Car
                    CarModel = car.CarModel,
                    Year = car.Year,
                    CoverPhoto = car.Images.FirstOrDefault().URL,
-               }).ToList()
-               .Take(count);
+               })
+               .Take(count).ToListAsync();
         }
     }
 }

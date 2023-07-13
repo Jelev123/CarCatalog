@@ -36,7 +36,7 @@ namespace CarCatalog.Api.Controllers.Car
 
             try
             {
-                return Ok(carService.GetAll(id, ItemsPerPage));
+                return Ok(await this.carService.GetAllAsync(id, ItemsPerPage));
             }
             catch (ArgumentException ae)
             {
@@ -47,10 +47,10 @@ namespace CarCatalog.Api.Controllers.Car
 
         [HttpGet]
         [Route("GetTransmisionsAndBodyTypes")]
-        public IActionResult GetTransmisionsAndBodyTypes()
+        public async Task<IActionResult> GetTransmisionsAndBodyTypes()
         {
-            var transmisions = transmisionService.AllTransmisions<TransmisionViewModel>();
-            var bodyTypes = bodyTypeService.AllBodyTypes<BodyTypeViewModel>();
+            var transmisions = await this.transmisionService.AllTransmisionsAsync<TransmisionViewModel>();
+            var bodyTypes = await this.bodyTypeService.AllBodyTypesAsync<BodyTypeViewModel>();
 
             var result = new
             {
@@ -71,16 +71,16 @@ namespace CarCatalog.Api.Controllers.Car
 
         [HttpPost]
         [Route("AddCar")]
-        public IActionResult AddCar([FromForm] CarViewModel addCar, IFormFile file)
+        public async Task<IActionResult> AddCar([FromForm] CarViewModel addCar, IFormFile file)
         {
             try
             {
                 if (file != null && file.Length > 0)
                 {
-                    imageService.CheckGallery(addCar);
+                   await this.imageService.CheckGalleryAsync(addCar);
                 }
 
-                carService.AddCars(addCar);
+               await this.carService.AddCarsAsync(addCar);
                 return Ok();
             }
             catch (Exception ex)
@@ -93,7 +93,7 @@ namespace CarCatalog.Api.Controllers.Car
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Route("GetById")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {
@@ -102,7 +102,7 @@ namespace CarCatalog.Api.Controllers.Car
                     return BadRequest("Invalid id");
                 }
 
-                var car = carService.GetById(id);
+                var car =await this.carService.GetByIdAsync(id);
                 if (car == null)
                 {
                     return NotFound();
@@ -120,11 +120,11 @@ namespace CarCatalog.Api.Controllers.Car
 
         [HttpPut]
         [Route("Edit")]
-        public IActionResult Edit([FromForm] CarViewModel car, int id)
+        public async Task<IActionResult> Edit([FromForm] CarViewModel car, int id)
         {
             try
             {
-                carService.EditCar(car, id);
+               await this.carService.EditCarAsync(car, id);
                 return Ok();
             }
             catch (ArgumentException ae)
@@ -141,11 +141,11 @@ namespace CarCatalog.Api.Controllers.Car
 
         [HttpDelete]
         [Route("Delete")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             try
             {
-                carService.DeleteCar(id);
+               await this.carService.DeleteCarAsync(id);
                 return Ok();
             }
             catch (ArgumentException ae)

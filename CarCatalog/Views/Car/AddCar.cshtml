@@ -2,10 +2,6 @@
 @model CarViewModel
 
 
-
-
-<h2 style="color: white">@ViewData["Title"]</h2>
-
 <div class="align-content-center">
     <div class="row col-md-4 offset-4">
         <form method="post" enctype="multipart/form-data" style="margin-top: 20px;">
@@ -17,22 +13,32 @@
             <div class="form-group">
                 <label asp-for="CarBrand"></label>
                 <input asp-for="CarBrand" class="form-control" />
+                <span asp-validation-for="CarBrand" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label asp-for="CarModel"></label>
                 <input asp-for="CarModel" class="form-control"/>
+                <span asp-validation-for="CarModel" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label asp-for="Year"></label>
                 <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label asp-for="HorsePower"></label>
                 <input asp-for="HorsePower" class="form-control" />
+                <span asp-validation-for="HorsePower" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label asp-for="FuelType"></label>
                 <input asp-for="FuelType" class="form-control" />
+                <span asp-validation-for="FuelType" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label for="TransmisionType">Transmission</label>
@@ -43,14 +49,14 @@
                         <option value="@transmision.TransmisionId">@transmision.TransmisionType</option>
                     }
                 </select>
-                <span asp-validation-for="TransmisionId" class="text-danger"></span>
+                <span asp-validation-for="TransmisionType" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="Gears">Gears</label>
                 <select id="Gears" class="form-control" name="GearId" disabled>
                     <option selected disabled>Select a Transmission first</option>
                 </select>
-                <span asp-validation-for="GearId" class="text-danger"></span>
+                <span asp-validation-for="Gears" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="BodyType">BodyType</label>
@@ -61,14 +67,14 @@
                         <option value="@bodyType.BodyTypeId">@bodyType.BodyTypeName</option>
                     }
                 </select>
-                <span asp-validation-for="BodyTypeId" class="text-danger"></span>
+                <span asp-validation-for="BodyTypeName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="Doors">Doors</label>
                 <select id="Doors" class="form-control" name="DoorId" disabled>
                     <option selected disabled>Select a BodyType first</option>
                 </select>
-                <span asp-validation-for="DoorId" class="text-danger"></span>
+                <span asp-validation-for="Doors" class="text-danger"></span>
             </div>
 
             <input class="btn text-black btn-info text-center" type="submit" value="Add" />

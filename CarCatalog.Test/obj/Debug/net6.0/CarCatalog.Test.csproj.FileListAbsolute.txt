@@ -1,0 +1,5 @@
+D:\Projects\CarCatalog\CarCatalog.Test\obj\Debug\net6.0\CarCatalog.Test.csproj.AssemblyReference.cache
+D:\Projects\CarCatalog\CarCatalog.Test\obj\Debug\net6.0\CarCatalog.Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CarCatalog\CarCatalog.Test\obj\Debug\net6.0\CarCatalog.Test.AssemblyInfoInputs.cache
+D:\Projects\CarCatalog\CarCatalog.Test\obj\Debug\net6.0\CarCatalog.Test.AssemblyInfo.cs
+D:\Projects\CarCatalog\CarCatalog.Test\obj\Debug\net6.0\CarCatalog.Test.csproj.CoreCompileInputs.cache

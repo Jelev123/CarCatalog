@@ -4,6 +4,6 @@ namespace CarCatalog.Core.Contracts.Transmision
 {
     public interface ITransmisionService
     {
-        IEnumerable<TransmisionViewModel> AllTransmisions<T>();
+        Task<IEnumerable<TransmisionViewModel>> AllTransmisionsAsync<T>();
     }
 }

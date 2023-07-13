@@ -4,7 +4,7 @@ using CarCatalog.Core.ViewModels.Car;
 using CarCatalog.Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace CarCatalog.Core.Services.Image
 {
@@ -20,7 +20,7 @@ namespace CarCatalog.Core.Services.Image
             this.environment = environment;
         }
 
-        public async Task CheckGallery(CarViewModel model)
+        public async Task CheckGalleryAsync(CarViewModel model)
         {
             if (model.GalleryFiles != null)
             {
@@ -31,7 +31,7 @@ namespace CarCatalog.Core.Services.Image
                     var gallery = new CarGalleryModel()
                     {
                         Name = file.FileName,
-                        URL = await UploadImage(CarConstants.CarImagesFolder, file)
+                        URL = await UploadImageAsync(CarConstants.CarImagesFolder, file)
                     };
                     model.Gallery.Add(gallery);
                 }
@@ -39,7 +39,7 @@ namespace CarCatalog.Core.Services.Image
         }
 
 
-        public async Task<string> UploadImage(string folderPath, IFormFile file)
+        public async Task<string> UploadImageAsync(string folderPath, IFormFile file)
         {
             folderPath += Guid.NewGuid().ToString() + "_" + file.FileName;
 
@@ -50,9 +50,9 @@ namespace CarCatalog.Core.Services.Image
             return "/" + folderPath;
         }
 
-        public void DeleteImage(string imageId)
+        public async Task DeleteImageAsync(string imageId)
         {
-            var image = data.Images.FirstOrDefault(x => x.ImageId == imageId);
+            var image = await data.Images.FirstOrDefaultAsync(x => x.ImageId == imageId);
 
             string filePath = Path.Combine(environment.WebRootPath, image.URL.TrimStart('/'));
 
@@ -62,7 +62,7 @@ namespace CarCatalog.Core.Services.Image
             }
 
             data.Remove(image);
-            data.SaveChanges();
+            await data.SaveChangesAsync();
         }
     }
 }

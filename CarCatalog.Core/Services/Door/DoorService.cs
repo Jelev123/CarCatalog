@@ -1,6 +1,7 @@
 ﻿using CarCatalog.Core.Contracts.Door;
 using CarCatalog.Core.ViewModels.Door;
 using CarCatalog.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarCatalog.Core.Services.Door
 {
@@ -13,15 +14,15 @@ namespace CarCatalog.Core.Services.Door
             this.data = data;
         }
 
-        public List<DoorViewModel> GetDoorsByBodyTypeId(int bodyTypeId)
+        public async Task<List<DoorViewModel>> GetDoorsByBodyTypeIdAsync(int bodyTypeId)
         {
-            return this.data.BodyTypesDoors
+            return await this.data.BodyTypesDoors
                 .Where(d => d.BodyTypeId == bodyTypeId)
                 .Select(d => new DoorViewModel 
                 {
                     DoorId = d.DoorId,
                     DoorsCount = d.Door.DoorCount,
-                }).ToList();
+                }).ToListAsync();
         }
     }
 }

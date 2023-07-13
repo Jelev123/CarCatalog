@@ -12,9 +12,9 @@ namespace CarCatalog.Controllers.Image
             this.imageService = imageService;
         }
 
-        public IActionResult DeleteImage(string id, int carId)
+        public async Task<IActionResult> DeleteImageAsync(string id, int carId)
         {
-            this.imageService.DeleteImage(id);
+            await this.imageService.DeleteImageAsync(id);
             return this.RedirectToAction("Edit", "Car", new { id = carId });
         }
     }

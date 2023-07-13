@@ -1,6 +1,7 @@
 ﻿using CarCatalog.Core.Contracts.Transmision;
 using CarCatalog.Core.ViewModels.Transmision;
 using CarCatalog.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarCatalog.Core.Services.Transmision
 {
@@ -13,14 +14,14 @@ namespace CarCatalog.Core.Services.Transmision
             this.data = data;
         }
 
-        public IEnumerable<TransmisionViewModel> AllTransmisions<T>()
+        public async Task<IEnumerable<TransmisionViewModel>> AllTransmisionsAsync<T>()
         {
-            return this.data.Transmisions
+            return await this.data.Transmisions
                 .Select(x => new TransmisionViewModel()
                 {
                     TransmisionId = x.TransmisionId,
                     TransmisionType = x.TransmisionType,
-                });
+                }).ToListAsync();
         }
     }
 }

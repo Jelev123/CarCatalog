@@ -4,18 +4,18 @@ namespace CarCatalog.Core.Contracts.Car
 {
     public interface ICarService
     {
-        void AddCars(CarViewModel addCar);
+        Task AddCarsAsync(CarViewModel addCar);
 
-        void DeleteCar(int id);
+        Task DeleteCarAsync(int id);
 
-        void EditCar(CarViewModel editCar, int id);
+        Task EditCarAsync(CarViewModel editCar, int id);
 
-        CarViewModel GetById(int id);
+        Task<CarViewModel> GetByIdAsync(int id);
 
-        IEnumerable<CarViewModel> GetAll(int page, int itemsPerPage);
+        Task<IEnumerable<CarViewModel>> GetAllAsync(int page, int itemsPerPage);
 
-        IEnumerable<RandomCars> RandomCars(int count);
+        Task<IEnumerable<RandomCars>> RandomCarsAsync(int count);
 
-        int GetCarCount();
+        Task<int> GetCarCountAsync();
     }
 }

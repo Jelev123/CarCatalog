@@ -4,6 +4,6 @@ namespace CarCatalog.Core.Contracts.Gear
 {
     public interface IGearService
     {
-        List<GearViewModel> GetGearsForTransmissionId(int transmisionId);
+        Task<List<GearViewModel>> GetGearsForTransmissionIdAsync(int transmisionId);
     }
 }
