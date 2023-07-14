@@ -214,7 +214,7 @@ namespace CarCatalog.Core.Services.Car
 
         public async Task<IEnumerable<CarViewModel>> GetAllAsync(int page, int itemsPerPage)
         {
-            var cars = await this.data.Cars
+            return await this.data.Cars
                 .Select(car => new CarViewModel()
                 {
                     Id = car.CarId,
@@ -226,8 +226,6 @@ namespace CarCatalog.Core.Services.Car
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
                 .ToListAsync();
-
-            return cars;
         }
 
         public async Task<CarViewModel> GetByIdAsync(int id)

@@ -1,15 +1,7 @@
 ﻿using CarCatalog.Core.Constants.Car;
-using CarCatalog.Core.Contracts.BodyType;
 using CarCatalog.Core.Contracts.Car;
-using CarCatalog.Core.Contracts.Door;
-using CarCatalog.Core.Contracts.Gear;
 using CarCatalog.Core.Contracts.GetCarViewModel;
-using CarCatalog.Core.Contracts.Transmision;
-using CarCatalog.Core.ViewModels.BodyType;
 using CarCatalog.Core.ViewModels.Car;
-using CarCatalog.Core.ViewModels.Door;
-using CarCatalog.Core.ViewModels.Gear;
-using CarCatalog.Core.ViewModels.Transmision;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarCatalog.Controllers.Car
@@ -17,19 +9,11 @@ namespace CarCatalog.Controllers.Car
     public class CarController : Controller
     {
         private readonly ICarService carService;
-        private readonly ITransmisionService transmisionService;
-        private readonly IBodyTypeService bodyTypeService;
-        private readonly IGearService gearService;
-        private readonly IDoorService doorService;
         private readonly ICarViewModel carViewModelService;
 
-        public CarController(ICarService carService, ITransmisionService transmisionService, IBodyTypeService bodyTypeService, IGearService gearService, IDoorService doorService, ICarViewModel carViewModelService)
+        public CarController(ICarService carService, ICarViewModel carViewModelService)
         {
             this.carService = carService;
-            this.transmisionService = transmisionService;
-            this.bodyTypeService = bodyTypeService;
-            this.gearService = gearService;
-            this.doorService = doorService;
             this.carViewModelService = carViewModelService;
         }
 
