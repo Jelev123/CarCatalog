@@ -20,11 +20,6 @@
             this.carViewModelService = carViewModelService;
         }
 
-        public CarController(ApplicationDbContext dbContext)
-        {
-            DbContext = dbContext;
-        }
-
         public async Task<IActionResult> AddCarAsync()
         {
             var carViewModels = await carViewModelService.GetCarViewModelsAsync();
