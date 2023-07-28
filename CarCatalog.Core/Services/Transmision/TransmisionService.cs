@@ -1,10 +1,10 @@
-﻿using CarCatalog.Core.Contracts.Transmision;
-using CarCatalog.Core.ViewModels.Transmision;
-using CarCatalog.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-
-namespace CarCatalog.Core.Services.Transmision
+﻿namespace CarCatalog.Core.Services.Transmision
 {
+    using CarCatalog.Core.Contracts.Transmision;
+    using CarCatalog.Core.ViewModels.Transmision;
+    using CarCatalog.Infrastructure.Data;
+    using Microsoft.EntityFrameworkCore;
+
     public class TransmisionService : ITransmisionService
     {
         private readonly ApplicationDbContext data;

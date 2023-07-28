@@ -1,13 +1,12 @@
-﻿using CarCatalog.Core.Contracts;
-using CarCatalog.Core.Contracts.Car;
-using CarCatalog.Core.ViewModels.Car;
-using CarCatalog.Infrastructure.Data;
-using CarCatalog.Infrastructure.Data.Models;
-using Microsoft.EntityFrameworkCore;
-
-
-namespace CarCatalog.Core.Services.Car
+﻿namespace CarCatalog.Core.Services.Car
 {
+    using CarCatalog.Core.Contracts;
+    using CarCatalog.Core.Contracts.Car;
+    using CarCatalog.Core.ViewModels.Car;
+    using CarCatalog.Infrastructure.Data;
+    using CarCatalog.Infrastructure.Data.Models;
+    using Microsoft.EntityFrameworkCore;
+
     public class CarService : ICarService
     {
         private readonly ApplicationDbContext data;
@@ -22,7 +21,7 @@ namespace CarCatalog.Core.Services.Car
         public async Task AddCarsAsync(CarViewModel addCar)
         {
             await this.imageService.CheckGalleryAsync(addCar);
-            var car = new Infrastructure.Data.Models.Car()
+            var car = new Car()
             {
                 CarBrand = addCar.CarBrand,
                 CarModel = addCar.CarModel,
@@ -213,8 +212,8 @@ namespace CarCatalog.Core.Services.Car
         }
 
         public async Task<IEnumerable<CarViewModel>> GetAllAsync(int page, int itemsPerPage)
-        {
-            return await this.data.Cars
+
+            => await this.data.Cars
                 .Select(car => new CarViewModel()
                 {
                     Id = car.CarId,
@@ -226,7 +225,6 @@ namespace CarCatalog.Core.Services.Car
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
                 .ToListAsync();
-        }
 
         public async Task<CarViewModel> GetByIdAsync(int id)
         {
@@ -267,14 +265,11 @@ namespace CarCatalog.Core.Services.Car
 
         }
 
-        public async Task<int> GetCarCountAsync()
-        {
-            return await this.data.Cars.CountAsync();
-        }
+        public async Task<int> GetCarCountAsync() => await this.data.Cars.CountAsync();
+        
 
         public async Task<IEnumerable<RandomCars>> RandomCarsAsync(int count)
-        {
-            return await this.data.Cars
+            => await this.data.Cars
                .OrderBy(s => Guid.NewGuid())
                .Select(car => new RandomCars()
                {
@@ -285,6 +280,5 @@ namespace CarCatalog.Core.Services.Car
                    CoverPhoto = car.Images.FirstOrDefault().URL,
                })
                .Take(count).ToListAsync();
-        }
     }
 }

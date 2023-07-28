@@ -1,10 +1,10 @@
-﻿using CarCatalog.Core.Contracts.Door;
-using CarCatalog.Core.ViewModels.Door;
-using CarCatalog.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-
-namespace CarCatalog.Core.Services.Door
+﻿namespace CarCatalog.Core.Services.Door
 {
+    using CarCatalog.Core.Contracts.Door;
+    using CarCatalog.Core.ViewModels.Door;
+    using CarCatalog.Infrastructure.Data;
+    using Microsoft.EntityFrameworkCore;
+
     public class DoorService : IDoorService
     {
         private readonly ApplicationDbContext data;

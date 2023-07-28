@@ -1,10 +1,8 @@
-﻿using CarCatalog.Infrastructure.Data.Models;
-using Microsoft.EntityFrameworkCore;
-
-
-
-namespace CarCatalog.Infrastructure.Data
+﻿namespace CarCatalog.Infrastructure.Data
 {
+    using CarCatalog.Infrastructure.Data.Models;
+    using Microsoft.EntityFrameworkCore;
+
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

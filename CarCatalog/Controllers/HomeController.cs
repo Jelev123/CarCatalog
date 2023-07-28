@@ -1,11 +1,11 @@
-﻿using CarCatalog.Core.Contracts.Car;
-using CarCatalog.Core.ViewModels.Home;
-using CarCatalog.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-
-namespace CarCatalog.Controllers
+﻿namespace CarCatalog.Controllers
 {
+    using CarCatalog.Core.Contracts.Car;
+    using CarCatalog.Core.ViewModels.Home;
+    using CarCatalog.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using System.Diagnostics;
+
     public class HomeController : Controller
     {
         private readonly ICarService carService;

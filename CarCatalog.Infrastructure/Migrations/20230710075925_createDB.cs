@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-
-#nullable disable
+﻿#nullable disable
 
 namespace CarCatalog.Infrastructure.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class createDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

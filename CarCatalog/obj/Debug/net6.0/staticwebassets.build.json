@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1ZM89tjrhhvZEPxz2kgRvrVzyWRgmvFvcMqHzeEVBMs=",
+  "Hash": "aQZZXpiVI4qSj+8/pLT/cox9VhNlBCTtvMlrV1IFZGU=",
   "Source": "CarCatalog",
   "BasePath": "_content/CarCatalog",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\carImages\\0b3dc597-dd5b-4cdf-8b8a-9dde43e4c035_10-porsche-718-cayman-gt4-rs-top-10.webp"
+    },
+    {
+      "Identity": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\1c378399-fe7a-41b4-80bb-6143418a5ff6_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg",
+      "SourceId": "CarCatalog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\",
+      "BasePath": "_content/CarCatalog",
+      "RelativePath": "images/carImages/1c378399-fe7a-41b4-80bb-6143418a5ff6_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\carImages\\1c378399-fe7a-41b4-80bb-6143418a5ff6_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg"
     },
     {
       "Identity": "D:\\Projects\\CarCatalog\\CarCatalog\\wwwroot\\images\\carImages\\4c0d6933-03ef-4605-9ead-438fa354e056_10-porsche-718-cayman-gt4-rs-top-10.webp",

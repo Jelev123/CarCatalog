@@ -1,10 +1,10 @@
-﻿using CarCatalog.Core.ViewModels.Door;
-using CarCatalog.Core.ViewModels.Gear;
-using Microsoft.AspNetCore.Http;
-using System.ComponentModel.DataAnnotations;
-
-namespace CarCatalog.Core.ViewModels.Car
+﻿namespace CarCatalog.Core.ViewModels.Car
 {
+    using CarCatalog.Core.ViewModels.Door;
+    using CarCatalog.Core.ViewModels.Gear;
+    using Microsoft.AspNetCore.Http;
+    using System.ComponentModel.DataAnnotations;
+
     public class CarViewModel
     {
         public int Id { get; set; }

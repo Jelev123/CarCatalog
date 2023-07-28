@@ -1,16 +1,16 @@
-﻿using CarCatalog.Core.Contracts.BodyType;
-using CarCatalog.Core.Contracts.Door;
-using CarCatalog.Core.Contracts.Gear;
-using CarCatalog.Core.Contracts.GetCarViewModel;
-using CarCatalog.Core.Contracts.Transmision;
-using CarCatalog.Core.ViewModels.BodyType;
-using CarCatalog.Core.ViewModels.Car;
-using CarCatalog.Core.ViewModels.Door;
-using CarCatalog.Core.ViewModels.Gear;
-using CarCatalog.Core.ViewModels.Transmision;
-
-namespace CarCatalog.Core.Services.GetCarViewModel
+﻿namespace CarCatalog.Core.Services.GetCarViewModel
 {
+    using CarCatalog.Core.Contracts.BodyType;
+    using CarCatalog.Core.Contracts.Door;
+    using CarCatalog.Core.Contracts.Gear;
+    using CarCatalog.Core.Contracts.GetCarViewModel;
+    using CarCatalog.Core.Contracts.Transmision;
+    using CarCatalog.Core.ViewModels.BodyType;
+    using CarCatalog.Core.ViewModels.Car;
+    using CarCatalog.Core.ViewModels.Door;
+    using CarCatalog.Core.ViewModels.Gear;
+    using CarCatalog.Core.ViewModels.Transmision;
+
     public class CarViewModelService : ICarViewModel
     {
         private readonly ITransmisionService transmisionService;

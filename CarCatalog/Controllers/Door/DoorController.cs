@@ -1,8 +1,8 @@
-﻿using CarCatalog.Core.Contracts.Door;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CarCatalog.Controllers.Door
+﻿namespace CarCatalog.Controllers.Door
 {
+    using CarCatalog.Core.Contracts.Door;
+    using Microsoft.AspNetCore.Mvc;
+
     public class DoorController : Controller
     {
         private readonly IDoorService doorService;

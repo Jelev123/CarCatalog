@@ -1,9 +1,9 @@
-﻿using CarCatalog.Core.Models;
-using CarCatalog.Infrastructure.Data;
-using CarCatalog.Infrastructure.Data.Models;
-
-namespace CarCatalog.Core.Contracts.Seed.SeedClasses
+﻿namespace CarCatalog.Core.Contracts.Seed.SeedClasses
 {
+    using CarCatalog.Core.Models;
+    using CarCatalog.Infrastructure.Data;
+    using CarCatalog.Infrastructure.Data.Models;
+
     public class TransmisionsSeeder : ISeeder
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)

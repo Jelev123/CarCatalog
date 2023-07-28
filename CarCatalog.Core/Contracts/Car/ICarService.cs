@@ -1,7 +1,7 @@
-﻿using CarCatalog.Core.ViewModels.Car;
-
-namespace CarCatalog.Core.Contracts.Car
+﻿namespace CarCatalog.Core.Contracts.Car
 {
+    using CarCatalog.Core.ViewModels.Car;
+
     public interface ICarService
     {
         Task AddCarsAsync(CarViewModel addCar);

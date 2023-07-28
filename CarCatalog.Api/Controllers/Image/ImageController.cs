@@ -1,9 +1,9 @@
-﻿using Dropbox.Api;
-using Dropbox.Api.Files;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CarCatalog.Api.Controllers.Image
+﻿namespace CarCatalog.Api.Controllers.Image
 {
+    using Dropbox.Api;
+    using Dropbox.Api.Files;
+    using Microsoft.AspNetCore.Mvc;
+
     [ApiController]
     [Route("api/images")]
     public class ImageController : ControllerBase

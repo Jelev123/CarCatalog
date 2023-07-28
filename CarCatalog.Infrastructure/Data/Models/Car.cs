@@ -22,6 +22,6 @@
 
         public ICollection<CarDoors> CarDoors { get; set; } = new HashSet<CarDoors>();
 
-        public virtual ICollection<CarGears> CarGears { get; set; } = new HashSet<CarGears>();
+        public ICollection<CarGears> CarGears { get; set; } = new HashSet<CarGears>();
     }
 }

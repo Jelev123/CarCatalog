@@ -1,14 +1,14 @@
-﻿using CarCatalog.Core.Contracts;
-using CarCatalog.Core.Contracts.BodyType;
-using CarCatalog.Core.Contracts.Car;
-using CarCatalog.Core.Contracts.Transmision;
-using CarCatalog.Core.ViewModels.BodyType;
-using CarCatalog.Core.ViewModels.Car;
-using CarCatalog.Core.ViewModels.Transmision;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CarCatalog.Api.Controllers.Car
+﻿namespace CarCatalog.Api.Controllers.Car
 {
+    using CarCatalog.Core.Contracts;
+    using CarCatalog.Core.Contracts.BodyType;
+    using CarCatalog.Core.Contracts.Car;
+    using CarCatalog.Core.Contracts.Transmision;
+    using CarCatalog.Core.ViewModels.BodyType;
+    using CarCatalog.Core.ViewModels.Car;
+    using CarCatalog.Core.ViewModels.Transmision;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class CarController : ControllerBase

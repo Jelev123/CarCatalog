@@ -64,6 +64,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\0b3dc597-dd5b-4cdf-8b8a-9dde43e4c035_10-porsche-718-cayman-gt4-rs-top-10.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\1c378399-fe7a-41b4-80bb-6143418a5ff6_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>CarCatalog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CarCatalog</BasePath>
+      <RelativePath>images/carImages/1c378399-fe7a-41b4-80bb-6143418a5ff6_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\1c378399-fe7a-41b4-80bb-6143418a5ff6_18015-MC20BluInfinito-scaled-e1666008987698 - Copy.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\carImages\4c0d6933-03ef-4605-9ead-438fa354e056_10-porsche-718-cayman-gt4-rs-top-10.webp))">
       <SourceType>Package</SourceType>
       <SourceId>CarCatalog</SourceId>

@@ -1,8 +1,8 @@
-﻿using CarCatalog.Core.Contracts;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CarCatalog.Controllers.Image
+﻿namespace CarCatalog.Controllers.Image
 {
+    using CarCatalog.Core.Contracts;
+    using Microsoft.AspNetCore.Mvc;
+
     public class Image : Controller
     {
         private readonly IImageService imageService;

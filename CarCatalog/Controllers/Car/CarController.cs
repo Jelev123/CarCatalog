@@ -1,20 +1,28 @@
-﻿using CarCatalog.Core.Constants.Car;
-using CarCatalog.Core.Contracts.Car;
-using CarCatalog.Core.Contracts.GetCarViewModel;
-using CarCatalog.Core.ViewModels.Car;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CarCatalog.Controllers.Car
+﻿namespace CarCatalog.Controllers.Car
 {
+    using CarCatalog.Core.Constants.Car;
+    using CarCatalog.Core.Contracts.Car;
+    using CarCatalog.Core.Contracts.GetCarViewModel;
+    using CarCatalog.Core.ViewModels.Car;
+    using CarCatalog.Infrastructure.Data;
+    using Microsoft.AspNetCore.Mvc;
+
     public class CarController : Controller
     {
         private readonly ICarService carService;
         private readonly ICarViewModel carViewModelService;
 
+        public ApplicationDbContext DbContext { get; }
+
         public CarController(ICarService carService, ICarViewModel carViewModelService)
         {
             this.carService = carService;
             this.carViewModelService = carViewModelService;
+        }
+
+        public CarController(ApplicationDbContext dbContext)
+        {
+            DbContext = dbContext;
         }
 
         public async Task<IActionResult> AddCarAsync()
@@ -88,15 +96,13 @@ namespace CarCatalog.Controllers.Car
                 return this.NotFound();
             }
 
-            var viewModel = new CarListViewModel()
+            return View (new CarListViewModel()
             {
                 ItemsPerPage = CarConstants.ItemsPerPage,
                 PageNumber = id,
                 CarsCount = await this.carService.GetCarCountAsync(),
                 Cars = await carService.GetAllAsync(id, CarConstants.ItemsPerPage)
-            };
-
-            return View(viewModel);
+            });
         }
     }
 }

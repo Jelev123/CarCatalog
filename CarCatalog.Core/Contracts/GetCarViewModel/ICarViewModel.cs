@@ -1,6 +1,5 @@
-﻿using CarCatalog.Core.ViewModels.Car;
-
-namespace CarCatalog.Core.Contracts.GetCarViewModel;
+﻿namespace CarCatalog.Core.Contracts.GetCarViewModel;
+using CarCatalog.Core.ViewModels.Car;
 
 public interface ICarViewModel
 {

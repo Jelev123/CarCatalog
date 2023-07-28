@@ -1,13 +1,13 @@
-﻿using CarCatalog.Core.Constants.Car;
-using CarCatalog.Core.Contracts;
-using CarCatalog.Core.ViewModels.Car;
-using CarCatalog.Infrastructure.Data;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-
-namespace CarCatalog.Core.Services.Image
+﻿namespace CarCatalog.Core.Services.Image
 {
+    using CarCatalog.Core.Constants.Car;
+    using CarCatalog.Core.Contracts;
+    using CarCatalog.Core.ViewModels.Car;
+    using CarCatalog.Infrastructure.Data;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.EntityFrameworkCore;
+
     public class ImageService : IImageService
     {
         private readonly ApplicationDbContext data;

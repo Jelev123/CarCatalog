@@ -1,10 +1,10 @@
-﻿using CarCatalog.Core.Contracts.Gear;
-using CarCatalog.Core.ViewModels.Gear;
-using CarCatalog.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-
-namespace CarCatalog.Core.Services.Gear
+﻿namespace CarCatalog.Core.Services.Gear
 {
+    using CarCatalog.Core.Contracts.Gear;
+    using CarCatalog.Core.ViewModels.Gear;
+    using CarCatalog.Infrastructure.Data;
+    using Microsoft.EntityFrameworkCore;
+
     public class GearService : IGearService
     {
         private readonly ApplicationDbContext data;

@@ -1,9 +1,9 @@
-﻿using CarCatalog.Core.Contracts.BodyType;
-using CarCatalog.Core.ViewModels.BodyType;
-using CarCatalog.Infrastructure.Data;
-
-namespace CarCatalog.Core.Services.BodyType
+﻿namespace CarCatalog.Core.Services.BodyType
 {
+    using CarCatalog.Core.Contracts.BodyType;
+    using CarCatalog.Core.ViewModels.BodyType;
+    using CarCatalog.Infrastructure.Data;
+
     public class BodyTypeService : IBodyTypeService
     {
         private readonly ApplicationDbContext data;

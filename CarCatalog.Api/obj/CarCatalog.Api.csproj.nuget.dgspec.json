@@ -236,6 +236,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "SharePointPnPCoreOnline": {
+              "target": "Package",
+              "version": "[3.28.2012, )"
             }
           },
           "imports": [

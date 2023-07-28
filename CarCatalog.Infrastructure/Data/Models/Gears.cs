@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CarCatalog.Infrastructure.Data.Models
+﻿namespace CarCatalog.Infrastructure.Data.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class Gears
     {
         [Key]
