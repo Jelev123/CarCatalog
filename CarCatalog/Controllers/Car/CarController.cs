@@ -71,33 +71,24 @@
 
         [HttpPost]
         public async Task<IActionResult> EditAsync(CarViewModel car, int id)
-        {
-            await this.carService.EditCarAsync(car, id);
-            return this.RedirectToAction("GetCarById", "Car", new { id = id });
-        }
+            => await this.carService.EditCarAsync(car, id)
+            .ContinueWith(_ => RedirectToAction("GetCarById", "Car", new { id = id }));
+
 
         public async Task<IActionResult> DeleteAsync(int id)
-        {
-            await this.carService.DeleteCarAsync(id);
-            return this.RedirectToAction("Index", "Home");
-        }
+            => await this.carService.DeleteCarAsync(id)
+            .ContinueWith(_ => this.RedirectToAction("Index", "Home"));
+        
 
-        public async Task<IActionResult> GetCarByIdAsync(int id) => this.View(await this.carService.GetByIdAsync(id));
+        public async Task<IActionResult> GetCarByIdAsync(int id) 
+            => this.View(await this.carService.GetByIdAsync(id));
 
         public async Task<IActionResult> GetAllCarsAsync(int id = 1)
-        {
-            if (id <= 0)
-            {
-                return this.NotFound();
-            }
-
-            return View (new CarListViewModel()
-            {
-                ItemsPerPage = CarConstants.ItemsPerPage,
-                PageNumber = id,
-                CarsCount = await this.carService.GetCarCountAsync(),
-                Cars = await carService.GetAllAsync(id, CarConstants.ItemsPerPage)
-            });
-        }
+            => (id <= 0 || CarConstants.ItemsPerPage <= 0)
+            ? NotFound()
+            : View(new CarListViewModel { ItemsPerPage = CarConstants.ItemsPerPage,
+              PageNumber = id,
+              CarsCount = await this.carService.GetCarCountAsync(),
+              Cars = await carService.GetAllAsync(id, CarConstants.ItemsPerPage) });
     }
 }

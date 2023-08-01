@@ -15,13 +15,11 @@
         }
 
         public async Task<IEnumerable<TransmisionViewModel>> AllTransmisionsAsync<T>()
-        {
-            return await this.data.Transmisions
+            => await this.data.Transmisions
                 .Select(x => new TransmisionViewModel()
                 {
                     TransmisionId = x.TransmisionId,
                     TransmisionType = x.TransmisionType,
                 }).ToListAsync();
-        }
     }
 }

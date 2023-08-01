@@ -13,6 +13,7 @@
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetGearsForTransmissionIdAsync(int transmisionId) => Json(await this.gearService.GetGearsForTransmissionIdAsync(transmisionId));
+        public async Task<IActionResult> GetGearsForTransmissionIdAsync(int transmisionId)
+            => Json(await this.gearService.GetGearsForTransmissionIdAsync(transmisionId));
     }
 }

@@ -15,14 +15,12 @@
         }
 
         public async Task<List<DoorViewModel>> GetDoorsByBodyTypeIdAsync(int bodyTypeId)
-        {
-            return await this.data.BodyTypesDoors
+            => await this.data.BodyTypesDoors
                 .Where(d => d.BodyTypeId == bodyTypeId)
                 .Select(d => new DoorViewModel 
                 {
                     DoorId = d.DoorId,
                     DoorsCount = d.Door.DoorCount,
                 }).ToListAsync();
-        }
     }
 }

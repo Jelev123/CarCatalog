@@ -15,8 +15,7 @@
         }
 
         public async Task<List<GearViewModel>> GetGearsForTransmissionIdAsync(int transmisionId)
-        {
-            return await this.data.TransmisionsGears
+            => await this.data.TransmisionsGears
                 .Where(tg => tg.TransmisionId == transmisionId)
                 .Select(tg => new GearViewModel
                 {
@@ -24,6 +23,5 @@
                     Value = tg.Gear.Value,
                 })
                 .ToListAsync();
-        }
     }
 }

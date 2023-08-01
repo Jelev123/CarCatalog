@@ -3,6 +3,7 @@
     using CarCatalog.Core.Contracts.BodyType;
     using CarCatalog.Core.ViewModels.BodyType;
     using CarCatalog.Infrastructure.Data;
+    using Microsoft.EntityFrameworkCore;
 
     public class BodyTypeService : IBodyTypeService
     {
@@ -14,13 +15,12 @@
         }
 
         public async Task<IEnumerable<BodyTypeViewModel>> AllBodyTypesAsync<T>()
-        {
-            return this.data.BodyTypes
+            => await this.data.BodyTypes
                 .Select(s => new BodyTypeViewModel
                 {
-                    BodyTypeId= s.BodyTypeId,
+                    BodyTypeId = s.BodyTypeId,
                     BodyTypeName = s.BodyTypeName,
-                });
-        }
+                })
+            .ToListAsync();
     }
 }

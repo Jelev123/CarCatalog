@@ -13,22 +13,22 @@
                 return;
             }
 
-            var bodyTypes = new List<Infrastructure.Data.Models.BodyType>
+            var bodyTypes = new List<BodyType>
             {
-                new Infrastructure.Data.Models.BodyType { BodyTypeName = "Sedan" },
-                new Infrastructure.Data.Models.BodyType { BodyTypeName = "Coupe" },
-                new Infrastructure.Data.Models.BodyType { BodyTypeName = "Hetch" },
-                new Infrastructure.Data.Models.BodyType { BodyTypeName = "Combi" },
-                new Infrastructure.Data.Models.BodyType { BodyTypeName = "Pickup truck" },
+                new BodyType { BodyTypeName = "Sedan" },
+                new BodyType { BodyTypeName = "Coupe" },
+                new BodyType { BodyTypeName = "Hetch" },
+                new BodyType { BodyTypeName = "Combi" },
+                new BodyType { BodyTypeName = "Pickup truck" },
             };
 
             dbContext.BodyTypes.AddRange(bodyTypes);
             await dbContext.SaveChangesAsync();
 
-            var doors = new List<Infrastructure.Data.Models.Door>
+            var doors = new List<Door>
             {
-                new Infrastructure.Data.Models.Door { DoorCount = 3 },
-                new Infrastructure.Data.Models.Door { DoorCount = 5 }
+                new Door { DoorCount = 3 },
+                new Door { DoorCount = 5 }
             };
 
             dbContext.Doors.AddRange(doors);

@@ -93,7 +93,7 @@
 
         public async Task DeleteCarAsync(int id)
         {
-            var car = this.data.Cars.FirstOrDefault(x => x.CarId == id);
+            var car = this.data.Cars.FirstOrDefaultAsync(x => x.CarId == id);
             data.Remove(car);
             await data.SaveChangesAsync();
         }
@@ -212,7 +212,6 @@
         }
 
         public async Task<IEnumerable<CarViewModel>> GetAllAsync(int page, int itemsPerPage)
-
             => await this.data.Cars
                 .Select(car => new CarViewModel()
                 {
@@ -265,7 +264,8 @@
 
         }
 
-        public async Task<int> GetCarCountAsync() => await this.data.Cars.CountAsync();
+        public async Task<int> GetCarCountAsync()
+            => await this.data.Cars.CountAsync();
         
 
         public async Task<IEnumerable<RandomCars>> RandomCarsAsync(int count)
@@ -279,6 +279,7 @@
                    Year = car.Year,
                    CoverPhoto = car.Images.FirstOrDefault().URL,
                })
-               .Take(count).ToListAsync();
+               .Take(count)
+               .ToListAsync();
     }
 }

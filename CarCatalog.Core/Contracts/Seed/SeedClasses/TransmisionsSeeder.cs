@@ -28,10 +28,10 @@
             dbContext.Gears.AddRange(gears);
             await dbContext.SaveChangesAsync();
 
-            var transmissions = new List<Infrastructure.Data.Models.Transmision>
+            var transmissions = new List<Transmision>
             {
-                new Infrastructure.Data.Models.Transmision { TransmisionType = "Manual" },
-                new Infrastructure.Data.Models.Transmision { TransmisionType = "Automatic" }
+                new Transmision { TransmisionType = "Manual" },
+                new Transmision { TransmisionType = "Automatic" }
             };
 
             dbContext.Transmisions.AddRange(transmissions);

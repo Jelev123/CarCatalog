@@ -13,9 +13,7 @@
         }
 
         public async Task<IActionResult> DeleteImageAsync(string id, int carId)
-        {
-            await this.imageService.DeleteImageAsync(id);
-            return this.RedirectToAction("Edit", "Car", new { id = carId });
-        }
+            => await this.imageService.DeleteImageAsync(id)
+            .ContinueWith(_ => this.RedirectToAction("Edit", "Car", new { id = carId }));
     }
 }

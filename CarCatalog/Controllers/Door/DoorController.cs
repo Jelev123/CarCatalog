@@ -13,6 +13,7 @@
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetDoorsByBodyTypeIdAsync(int bodyTypeId) => Json(await this.doorService.GetDoorsByBodyTypeIdAsync(bodyTypeId));
+        public async Task<IActionResult> GetDoorsByBodyTypeIdAsync(int bodyTypeId)
+            => Json(await this.doorService.GetDoorsByBodyTypeIdAsync(bodyTypeId));
     }
 }

@@ -15,14 +15,11 @@
         }
 
         public async Task<IActionResult> Index()
-        {
-            var randomCars = new HomeViewModel()
+            => this.View(new HomeViewModel()
             {
                 RandomCars = await this.carService.RandomCarsAsync(6)
-            };
+            });
 
-            return View(randomCars);
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
