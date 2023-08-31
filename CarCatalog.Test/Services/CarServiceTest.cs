@@ -93,8 +93,8 @@
             };
 
             cars.AddRange(new[] { car1, car2 });
-            data.Cars.AddRange(cars);
-            data.SaveChanges();
+            await data.Cars.AddRangeAsync(cars);
+            await data.SaveChangesAsync();
             return new CarService(data, null);
         }
     }
